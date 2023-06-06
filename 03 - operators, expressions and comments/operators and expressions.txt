@@ -1,0 +1,22 @@
+OPERATORS, EXPRESSIONS AND COMMENTS
+Operators: Allow interactions between variable values. Can be:
+
+Arithmetic: +, -, *, /, %
+
+Grouping: ()
+
+Assignment: =, +=, -=, *=, /=, %=
+
+Chaining: is the dot in the middle of the function name, to join expressions and create functions.
+
+Increment and decrement: ++, --
+Expression: Line of code that uses operators.
+
+
+COMMENTS
+
+These are lines of code that will be ignored by the code interpreter. They are used to leave notes, help to understand the code and document the developer  actions.
+
+// - one-line comment
+
+/* (...) */ - multi-line comment

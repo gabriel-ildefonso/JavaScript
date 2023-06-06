@@ -1,0 +1,23 @@
+VARIABLES
+
+Variables are memory allocations that receive data to be used in the code, referencing the variable name. They can be created using the reserved words: var, let and const.
+var year = 2023
+let year = 2023
+
+//let is a more modern way of creating variables that can be changed throughout the code.
+const year = 2023
+
+//const creates a constant value, which cannot be changed throughout the code.
+
+JavaScript is a weakly and dynamically typed language, which means that variables can have their types changed, and the language will try to correct errors, such as adding number and string, in which case the browser will convert number to string and concatenate.
+
+
+Naming variables
+
+Meaningful names should be used for the variables, in order to make the code easy to interpret.
+
+Cases: The way names are written, spaces cannot be used. Different ways of writing are used:
+
+camelCase: from the second word onwards, words start with a capital letter // username
+
+snake_case: Use the underscore to separate words //user_name
