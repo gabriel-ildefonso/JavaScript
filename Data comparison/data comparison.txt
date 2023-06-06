@@ -1,0 +1,11 @@
+DATA COMPARISON
+
+Operators
+
+== and === > The first operator compares values, the second compares including the data type
+// 10 == '10' true; 10 === '10' false.
+
+!= and !== > Are used to check the inequality of two values, they work in the same way as == and ===.
+// 5 ! = '5' false 5 !== '5' true
+
+>,<,>=,<=   These work just like in math
