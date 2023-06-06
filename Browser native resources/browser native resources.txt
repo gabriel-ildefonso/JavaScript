@@ -1,0 +1,14 @@
+NATIVE BROWSER FEATURES
+
+console.log() = write to the console
+console.error() = write with error typography (red)
+console.warn() = write with warning typography (yellow)
+
+window = represents the browser window.
+window.alert() = creates an alert on the screen, like a popup
+window.promp() = allows the user to enter a message in the console.
+window.confirm() = serves to show a confirmation image, returning a boolean value, true for yes and false for no/cancel.
+// let confirmation = window.confirm("Do you confirm this action?")
+
+Window is the browser's global object, meaning that all functions associated with Window (alert, prompt, confirm, etc.) are available for use without the need to put "window" before the method, just invoke the method:
+alert(hello world!)
