@@ -1,0 +1,25 @@
+LOGICAL OPERATORS
+
+&& - "and" operator
+
+Will only return "true" if both values are true
+true&&true === true
+true&&false === false
+false&&true === false
+false&&false === false
+
+
+|| - "or" operator
+
+It will only return "false" if both values are false
+true||true === true
+true||false === true
+false||true === true
+false||false === false
+
+
+! - operator "no"/"not"/"¬"
+
+Inverts the result from true to false and vice versa
+!true === false
+!false === true
