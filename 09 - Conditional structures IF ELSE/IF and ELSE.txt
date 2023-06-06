@@ -1,0 +1,27 @@
+CONDITIONAL STRUCTURES
+
+IF and ELSE
+
+Allows you to create blocks of code that will be executed only when a certain logical operation returns true
+Blocks of code that will only be executed if a certain condition (logical operation) is met/true. If the expression used as a condition does not return a boolean value, JavaScript will then try to convert the result of the expression to a boolean value.
+
+IF condition === true THEN execute
+
+if (6 === 6) {
+  console.log("true")
+}
+
+In addition, ELSE (else) can be used to add a block of code that will be executed only when the same logical condition is false.
+
+if (6 === 6) {
+  console.log("true")
+} else{
+  console.log("false")
+}
+
+Syntax:
+
+IF condition === true THEN execute1 ELSE execute2
+
+Ternary operator joining IF and ELSE on the same line
+let result = (condition) ? value_if_true : value_if_false

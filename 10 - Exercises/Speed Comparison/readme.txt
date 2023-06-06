@@ -1,0 +1,1 @@
+Write a javascript program that allows you to enter the name and speed of two vehicles and display a message on the screen saying which of the two is faster (or that the speeds are the same, if this is the case)
