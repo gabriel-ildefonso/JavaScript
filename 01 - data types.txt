@@ -1,0 +1,13 @@
+DATA TYPES
+
+Data can be represented in different ways, the primitive types of JavaScript are:
+number and bigint: numeric types. Number works for both integers and floating point. Bigint is used to represent very large integers, to activate this functionality just add "n" to the end of the integer.
+string: Can be treated as a string of characters, the data must be enclosed in quotes (single or double, but must be standardized).
+boolen: logical values, true or false.
+null and undefined: empty or undefined
+
+More advanced (non-primitive) types:
+
+Objects: It is a structure, a set of various pieces of information, which allows storing several different values.
+
+Function: A procedure to be executed
