@@ -1,0 +1,3 @@
+## Multiplication Robot
+
+Write a javascript program that is able to calculate the table of a given number (from 1 to 20). The program must start asking for the number to be used in the calculations and then save all the results of multiplications from 1 to 20 using the number informed inside a string variable. Then the program should display these results and exit.

@@ -1,0 +1,3 @@
+## Looking for Palindromes
+
+Write a javascript program that is able to identify whether a word is a palindrome. A palindrome is a word that reads backwards has the same letters in the same order. The program should start asking for a word to be entered and then it should display a message saying whether or not that word is a palindrome. If it is not a palindrome, the program must show the word read from left to right and from right to left.
