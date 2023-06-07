@@ -1,0 +1,8 @@
+WHILE
+Very similar to WHILE, but this one guarantees that the command is executed at least once, even if the condition is false. 
+
+Because the command block is created before the condition, if this is true it will run again..
+
+do{
+//commands
+}while(condition)

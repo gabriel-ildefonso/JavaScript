@@ -1,0 +1,20 @@
+FOR
+It also serves to perform repetitions, however, with a different structure than "while" and "do while".
+
+It is used to abbreviate code in cases that follow this specific structure:
+
+Initialization: instruction that is executed first of all. A common method is to create a variable at 'for' initialization;;
+Condition: condition similar to 'while', it is tested before the execution of the repeating block
+Finalization: expression executed after the repetition block
+
+FOR initialization; condition; finalization DO_SOMETHING
+
+Each of these structures is optional, but the ";" must appear within the structure, to indicate that the lack of elements is intentional
+
+An example of a common use of for is when we want to iterate a fixed number of times, such as once for each letter in a word, or once for each item in a list.
+
+Syntax:
+
+for(initialization; condition; finalization){
+  command
+}
