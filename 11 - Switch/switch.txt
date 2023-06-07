@@ -1,0 +1,13 @@
+SWITCH
+Allows you to create conditional blocks like the IF, but with a structure that evaluates an expression and tests the result against several predetermined cases, executing the corresponding cases. It is possible to define the default case, which is always executed. It is also possible to stop the execution after any of the cases.
+
+switch(expression){
+  case a:
+    execute_a
+  CASE b:
+    execute_b
+    break   //break tells the program to exit the swtch code block and go on with the execution of the program.
+  CASE c:
+    execute_c
+  DEFAULT: do_always_this
+}
