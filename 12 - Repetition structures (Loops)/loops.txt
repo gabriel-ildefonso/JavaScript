@@ -1,0 +1,4 @@
+Repetition structures, or Loops, are used to execute the same block of code several times. 
+
+All looping structures accept "break" to stop looping at any time. 
+In the next folders we will see different exemples of loops.

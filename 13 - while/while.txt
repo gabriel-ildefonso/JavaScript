@@ -1,0 +1,9 @@
+
+
+WHILE
+It serves to create a repeating loop that will be executed while a certain condition is true.
+ATTENTION: It is important that there is always a way for the condition to become false, or else the block will repeat itself forever.
+
+while (condition){
+  //command
+}
