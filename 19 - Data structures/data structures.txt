@@ -1,0 +1,36 @@
+DATA STRUCTURES
+
+  They are a particular way of storing and organizing complex data so that they can be used efficiently, facilitating their search and modification.
+
+  Classic data structures:
+
+  >Linked List - Ordered collection of values where each element points to the next.
+
+  >Array - Collection of elements that can be identified by an index.
+
+  >Queue - Collection of elements where the first element to be removed must be the first element added. Also called FIFO (first-in/first-out) lists, first-in/first-out.
+
+  >Stack - Collection of elements where the first element to be removed must be the last element added. Also called LIFO (last-in/first-out) lists.
+
+  >Tree - Set of elements called 'nodes' organized in hierarchical structures (non-sequential), that is, they can be "below" or "above" other nodes. Works like a family tree, folder structure on a computer.
+
+DATA STRUCTURES IN JAVASCRIPT (and other high-level programming languages):
+
+  >Lists (Arrays) -
+  >Dictionaries (Objects) -
+
+VALUE AND REFERENCE
+
+  Value - Is a value written into memory (as redundant as this may seem)
+
+  Reference - Locations where data is stored within a data structure, emulated copies of data can be created 
+  //array2 = array
+
+  let array1 = [1, 4, 6, 2]
+  let array2 = array1
+
+  array2[0] = 5
+  console.log(array2) //[5, 4, 6, 2]
+  console.log(array1) //[5, 4, 6, 2]
+
+  We created an array, and then we created another array that received the same values as the first one. When editing the first element of the second array (copy), the first element of the first array was also changed. This happens because in JavaScript, when we work with primitive types, they have individual values for each of the variables created. In the case of arrays and objects, references are used. When we create an array, and then create another array copy of the first one, a new variable is not created for the second array, so there is no space in computer memory reserved for the second array, it is, for all intents and purposes, a twin of the first array, any changes to the second array will change the first array.
