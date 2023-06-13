@@ -1,0 +1,20 @@
+ARRAY
+
+The Array is its own framework for working with all kinds of lists. Its elements are identified by an integer index, starting with "0".
+
+The array can store any type of data and be of any size.
+
+
+The array can be created and used using square brackets [], where each element of the array is separated by a comma
+
+let array = []
+array[0] = 'hello'
+array[1] = 42
+
+Arrays have functions for each of the various use cases:
+
+a - Queuing and unqueuing
+b - Stack and unstack
+c - Find the index of a value
+d - cut and concatenate
+e - etc
