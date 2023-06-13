@@ -18,3 +18,40 @@ b - Stack and unstack
 c - Find the index of a value
 d - cut and concatenate
 e - etc
+
+METHODS
+
+ADD ELEMENTS
+
+// push: Adds an element to the end of the array and returns the new array size
+// unshift: Adds an element to the beginning of the array and returns the new array size
+
+The array itself manages changing the indexes of the elements.
+
+
+REMOVE ELEMENTS
+
+// pop: Removes the last element from the array and returns the removed element
+// shift: Removes the first element from the array and returns the removed element
+
+
+SEARCH FOR AN ELEMENT
+
+// includes: Checks if a certain element is included in the array, returning a boolean value.
+// indexOf: Finds the index that has the indicated element, or -1 if it does not exist in the array
+
+
+CUTTING AND CONCATENATING
+
+// slice: Copies a part of the array and returns the copied part without changing the original array. The starting index is included in the copy, but the ending index is not copied.
+
+Can also be used with negative numbers to reference from the end of the array
+
+// concat: Joins two or more arrays and/or items and returns the result (without changing any of the original arrays)
+
+REPLACING ELEMENTS
+
+// splice: Allows you to remove elements at any position in the array and replace them with new ones. removed). The removed element(s) are returned in array format.
+
+ITERATING OVER THE ELEMENTS
+// Using for to loop through each array element
