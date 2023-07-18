@@ -1,0 +1,18 @@
+As its name suggests, a two-dimensional array is an array that has two dimensions.
+
+In practice, it is an array that contains other arrays inside. 
+
+Just start the new array with a square bracket.
+
+An array can have infinite dimensions, just create new arrays to create new dimensions.
+
+To instantiate an element from one array within another array, simply chain the square brackets: 
+// console.log(array[0][1])
+
+An interesting command when working with arrays is console.table(). With it, JS tries to display the contents in table form, if possible.
+
+It is also possible to iterate on multidimensional arrays.
+
+All functions used in one-dimensional arrays, such as pop(), push(), unshift(), also work with multidimensional arrays, just use the square brackets to reference the location of the array you want to change.
+
+
