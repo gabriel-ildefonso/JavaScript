@@ -1,0 +1,29 @@
+Objects are JavaScript frameworks for working with key-value dictionaries.
+
+An object's key-value pair is called a "property".
+  The key serves as the property name. the value, as redundant as that sounds, is the value stored in that property, similar to values stored in variables.
+
+Unlike arrays, its elements do not have any sequence. It is not an ordered collection of items.
+
+A property can also contain strings, numbers and/or Booleans as a key.
+
+A property can store any amount of valuable data.
+
+Objects can be created using braces {}
+   //let object = {}
+
+Its properties and functions can be referenced by dot "." or square brackets [ ]
+   object.prop = 'hello world!'
+   object.method()
+
+  let name = 'name'
+  object[name] = 'hello world!
+  object.prop === object[name]
+  let function = 'console.log'
+  object[function]() //usa o dinamismo para juntar strings e criar a função object[console.log]
+
+const person = {}
+person.name = 'Gabriel'
+person.age = '29'
+person.friends = ['Chandler', 'Joey', 'Monica', 'Phoebe', 'Ross', 'Rachel']
+person.adress = '90, Bedford St, Greenwich Village, New York'
