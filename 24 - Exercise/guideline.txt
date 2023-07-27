@@ -1,0 +1,13 @@
+Real Estate Registry
+
+Write a javascript program that works as a property register and meets the following requirements:
+
+- Must have an interactive menu that is always displayed until the user chooses to exit.
+- The interactive menu should show the number of registered properties at the top.
+- The menu must have the option to save a property.
+- To save a new property, the program must ask for the following information:
+     - Owner name.
+     - Number of rooms.
+     - Number of bathrooms.
+     - If you have a garage.
+- The menu should also have the option to show all saved properties.
