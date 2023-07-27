@@ -1,0 +1,22 @@
+Function is a structure that allows you to declare a procedure and execute it programmatically.
+
+A function can be seen as:
+1 - Entrance
+
+2 - procedure
+
+3 - Exit
+
+Both the input and the output of a function are optional, that is, a function can exist without one of them or without both.
+
+Function inputs are called 'parameters'.
+The function outputs are called 'return'.
+
+Syntax:
+
+function functionName(entry) {
+   //procedure
+  
+   return
+}
+
