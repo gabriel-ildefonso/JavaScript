@@ -1,0 +1,56 @@
+The parameter is the input of the function, what we give it so that it can carry out its procedure.
+
+They are the values ​​informed inside the parentheses after the name of the function.
+
+It works like a variable available inside the function, but which is informed when we invoke the function.
+
+Ex:
+function double(x) {
+  alert('The double of ' + x + ' is ' + (x * 2))
+}
+
+double(5)
+
+return >>> 'The double of 5 is 10'
+
+We can also invoke the function without supplying the parameter:
+double()
+return >>> The double of undefined is NaN
+
+Why 'undefined'? In JS, any declared variable that has no value is treated as undefined
+
+Why NaN? NaN (Not a Number) is a reserved value, treated as numeric, but represents a numeric error, the result of an unsuccessful operation.
+
+It is possible to define a default value for the parameter, for when this is not informed by the user:
+function sayHello(name = 'world'){
+  alert('Hello ' + name + '!')
+}
+sayHello()
+
+return >>> Hello world!
+
+When we define a default value for a parameter, the intention is not to need to declare it when we invoke the function. Therefore, whenever there are parameters that have default values, these parameters must be declared last in the function.
+
+It is possible to enter as many parameters as necessary, just separate them with a comma:
+
+function sum(a, b){
+  alert('The result of the sum is: ' + (a + b))
+}
+sum(6, 7)
+
+function createUser(name, email, password, type = 'admin'){
+  const user = {
+    name: name, //when the object's key and value are the same, you can create the object with just the key.
+    email: email,
+    password: password,
+    type: type
+  }
+  console.log(user)
+}
+
+
+When you have to work with a function with many parameters, a good option is to create a single parameter that is an object:
+function aLotOfParameters(person){
+   person.name
+   person.address
+}
