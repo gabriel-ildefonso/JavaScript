@@ -1,1 +1,73 @@
-O retorno de uma função nada mais é do que a saída fornecida pelo procedimento executado pela função.
+The return of a function is nothing more than the output provided by the procedure executed by the function.
+
+By default, in JavaScript, functions that do not have 'return' declared will return 'undefined'.
+Ex:
+function Average(a, b){
+  average const = (a + b) / 2
+}
+const result = Average(7, 2)
+console.log(result)
+
+return >>> undefined
+
+This happens because the variables created in the function only exist within the function itself, not being available to be used in other parts of the program.
+To overcome this problem, just declare return with what you want the function to report, in this case the 'average' variable; 'return' makes internal function variables available:
+
+function Average(a, b){
+  average const = (a + b) / 2
+  average return
+}
+const result = Average(7, 2)
+console.log(result)
+
+return >>> 4.5
+
+function Product(name, price){
+  const product = {
+    name, // name: name
+    price, // price: price
+    stock: 1
+  }
+  return product
+}
+
+const notebook = Product('Intel i3 Notebook', 2500)
+console.log(notebook)
+
+
+The return of a function can be any expression, not necessarily a variable.
+
+function areaRectangle(base, height){
+  return area = base * height // in this case the return is an expression
+}
+console.log(areaRectangle(3, 5))
+
+The return can even be the call of another function:
+function areaSquare(side){
+  return areaRectangle(side, side)
+}
+console.log(areaSquare(9))
+
+
+A function can only have one 'return', after the 'return' the function ends
+function hello(){
+  let text = '...'
+  return text
+  text = 'Hello world'
+  console.log(text)
+}
+console.log(hello())
+
+return >>> ...
+'...' was returned because the 'return' ends the function, the changes and commands declared after the return are ignored.
+
+There are specific cases where multiple 'return' will be needed in one function, using 'if', which will work similarly to 'switch':
+fuction age(age){
+  if (age >= 18){
+    return 'of legal age'
+  } else{
+    return 'minor'
+  }
+}
+console.log(age(29))
+console.log(age(15))

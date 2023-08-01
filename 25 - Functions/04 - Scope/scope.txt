@@ -1,0 +1,67 @@
+Scope is nothing more than the context in which the variable was declared; it can be more external or more internal in relation to the code. Being that the most external is the code itself, outside of any function.
+Variables declared in the outermost scope can be used in the innermost scope. But the opposite is not possible.
+let pokemon = 'charmander'
+
+function evolve(){
+  pokemon = 'charmeleon'
+}
+
+console.log(pokemon)
+to evolve()
+console.log(pokemon)
+
+return >>>
+charmander
+charmeleon
+
+function animal(){
+  let animal = 'cat'
+}
+animal()
+console.log(animal)
+
+return >>> animal is not defined
+
+Variables created with 'var' are available to the outermost scope
+
+function result(grade){
+  if (grade >= 60){
+    var approved = true
+    let status = 'approved'
+  } else{
+    var approved = false
+    let status = 'failed'
+  }
+  console.log(grid)
+  console.log(approved)
+  console.log(situation)
+}
+
+result(83)
+result(49)
+
+return >>>
+83
+true
+error situation is not defined
+
+Variables created with 'var' are loaded right at the beginning of program execution, they are created but the value is not assigned.
+
+console.log(name)
+console.log(lastname)
+
+var name = 'Gabriel'
+let lastname = 'Silveira'
+
+console.log(name)
+console.log(lastname)
+
+return >>>
+undefined
+reference error: cannot access 'lastname' before initialization
+Gabriel
+Silveira
+
+
+When the file was loaded, 'name' came into existence, but without the value being assigned, 'undefined' being returned.
+The reference error is due to the variable not being declared
