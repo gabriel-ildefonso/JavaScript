@@ -1,0 +1,46 @@
+Funções anônimas são funções que não tem nome. Uma de suas aplicações é o armazenamento de funções em variáveis.
+
+
+No JavaScript, e em outras linguagens que suportam o paradigma funcional, as funções podem ser lidas como valores, ou mesmo armazenadas em variáveis.
+
+function soma (a, b){
+  return a + b
+}
+
+const operação = soma   //Repare que não há parênteses em soma.
+
+Se fosse const operação = soma(), a variável 'operação' receberia o valor do resultado da função 'soma'. Sem os parênteses, a variável 'operação' é igual a própria função 'soma'.
+
+function soma (a, b){
+  return a + b
+}
+
+let operação = soma
+console.log(operação(4, 5))
+
+operação = function (a, b){
+  return a - b
+}
+console.log(operação(4, 5))
+
+>>>
+9
+-1
+Assim criamos uma função diretamente dentro de uma variável, alterando o comportamento de uma função, de modo que não foi necessário dar um nome para a função.
+
+Assim como acontece com o 'var', funções criadas com o 'function' são carregadas no início do arquivo. O mesmo não acontece com as funções anônimas, sendo que só podem ser acessadas após terem sido declaradas.
+
+helloWorld()
+hiWorld()
+
+function helloWorld(){
+  console.log('Hello world')
+}
+
+const hiWorld = funtion(){
+  console.log('Hi world')
+}
+
+>>>>
+Hello world
+ReferenceError: Cannot acess 'hiWorld' before initialization
