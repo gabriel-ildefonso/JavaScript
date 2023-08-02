@@ -1,0 +1,37 @@
+Methods are functions attached to objects
+
+The console is an object
+typeof console
+>>> object
+
+console.log is a function
+typeof console.log
+>>> function
+
+We then say that the log is a method of the console object
+
+To create a method, that is, create a function inside the object, just declare the function inside the object in a similar way to creating common functions, with the difference of not using the reserved word 'function':
+
+let person = {
+   name: 'Gabriel',
+   age: 29,
+   sayHello(){
+     console.log('Hello world!')
+   }
+}
+
+To execute the method, just invoke the object name and the function name:
+//nameObject.nameOfFunction()
+
+console.log(person)
+person.sayHello()
+
+If you want to create a method that uses a property of the object itself, you must use the reserved word 'this'. 'this' references the object it is inserted in
+
+let person = {
+   name: 'Gabriel',
+   age: 29,
+   sayHello(){
+     console.log('Hello world!, my name is ' + this.name)
+   }
+}
