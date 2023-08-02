@@ -1,0 +1,51 @@
+Uma função recursiva é uma função que invoca a si mesma, o que cria uma pilha de chamadas de funções que vão se repetindo. Basicamente é uma função que chama a si mesma e se executa novamente, criando o efeito chamado 'recursão'. 
+
+A função abaixo recebe um número, imprime o número no console,  se o número for par, a função irá dividir o número por 2 e reiniciará a função, imprimindo o número no console, verificando se o novo número é par, e seguirá nesse loop até que um número ímpar surja como resultado
+
+function dividir(num){
+  console.log(num)
+  if (num % 2 === 0){
+    dividir(num / 2)
+  } else{
+    return num
+  }
+}
+
+dividir(40)
+>>>
+40
+20
+10
+5
+
+Deve-se tomar cuidado para que os resultados sejam diferentes, caso seja sempre o mesmo número, a função seria executada eternamente, sendo sempre o mesmo número, sempre par, sendo a função executada até que fosse esgotada a 'pilha de chamadas'. 
+Sempre que uma função é invocada, ela é colocada em uma pilha, havendo uma próxima chamada, será também empilhada, antes da finalização da função anterior. Funciona assim:
+Se a dentro da primeira função houver uma outra função, a segunda função será executada antes da finalização da primeira. Se a segunda função tiver em seu interior uma terceira função, a terceira função será executada antes da finalização da segunda. Isso ocorrerá até que a última função seja resolvida para que as funções anteriores possam ser terminadas.
+// Funciona como se várias fórmulas 'SE' do Microsoft Excel fossem aninhadas, uma dentro da outra. Só que o JS trabalha de trás para frente, resolvendo a última função, depois a penúltima, a antepenúltima, e assim segue até que todas sejam resolvidas.
+
+Como dito anteriormente, deve-se tomar cuidado ao trabalhar com recursão para que não seja criado um loop infinito. Diferentemente dos laços de repetição, na repetição as funções criadas não são resolvidas antes de alcançar o infinito, de modo que o programa irá esgotar sua capacidade antes de finalizar a recursão, como é o caso da função abaixo:
+
+function dobro(num){
+  console.log(num)
+  dobro(num * 2)
+}
+dobro(1)
+>>> 1, 2, 4, 8, 16, 32, 64 ........
+irá realizar o dobro dos números alcançados até o infiniro, causando um erro na execução do programa.
+
+Um caso interessante de aplicação de recursão é no cálculo de fatoriais:
+
+//fatorial de 5: 5! === 5 * 4 * 3 * 2 * 1 === 5 * 4!
+function fatorial(num){
+  console.log('Número: ' + num)
+  if (num === 0){
+    return 1  // o fatorial de 0 é 1
+  } else if(num === 1){
+    return 1
+  } else {
+    console.log(num + ' * !' + (num - 1))
+    return num * fatorial(num - 1)
+  }
+}
+
+console.log(fatorial(5))
