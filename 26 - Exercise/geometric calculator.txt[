@@ -1,0 +1,11 @@
+Geometric Calculator
+
+Write a javascript program to calculate the area of different geometric shapes. The program should start with a menu containing the different calculation options. The options must be:
+
+- triangle area: base * height / 2
+- rectangle area: base * height
+- area of square: side²
+- area of the trapezoid: (larger base + smaller base) * height / 2
+- circle area: pi * radius² (consider pi = 3.14)
+
+You should write the program using functions whenever possible to separate procedures. The program must also have an option to “Exit” and until it is chosen, it must return to the menu.
