@@ -1,0 +1,47 @@
+Global objects are standard language objects, always available for use. Just as repeating structures are always available to use, global objects can be referenced directly in code, they don't need to be created. The difference is that they are not structures like conditionals, they are actually objects.
+Global objects have specific applications, each object has a function.
+ATTENTION: Do not confuse it with the browser's window global scope object (or the global scope of the environment in which you are working). In JavaScript, the Global Scope is the most external scope of all, where the code is written directly, which would basically be the browser window. So we can use the alert function without the window object/scope, as it is already running directly on the window
+
+Examples: // Not all of them, but they are the main ones
+Can be used to create their corresponding data type
+object
+
+array
+
+String
+String() - creates a string with whatever is inside the parentheses: String(43) >>> '43'
+
+Number
+
+Date - Serves to operate with date and time data
+Date() - returns the current date, day, time, day of the week and time zone
+
+Math - Is intended to work with values, expressions and mathematical calculations
+
+//Note that they all start with a capital letter, this is from the JavaScript language itself, it's just a naming pattern, to differentiate them.
+
+
+As we saw, it is possible to use global objects to create values.
+See that if we create a variable and assign the global object Object to it, we can transform this Object into a function and execute it. If we then display the value of this variable, an empty object will be returned.
+
+let person - Object()
+Console.log(person)
+>>>>>>>>>>>>>>>
+{ }
+
+Similarly, we can create an array and already provide values to it:
+
+let list = Array('A', 'B', 'C')
+>>>>>>>>>>>>>>>>>>>>>>>>
+['A', 'B', 'C']
+
+The values created will have the data type of the global object used in their creation.
+
+But what if we pass an object to string?
+
+let text = String({ }) //we use the String to transform an object into a string
+>>>>>>>>>>>>>>>>>
+'[object Object]' //JS cannot directly convert an object to text, returning the specific text shown here.
+
+As they are objects, when we instantiate the name of the global object followed by a ".", we will see several properties and methods that can be used with that global object.
+Number.isInteger() - checks if a given number is an integer, returning a boolean value //it understands that 4.00 is an integer.

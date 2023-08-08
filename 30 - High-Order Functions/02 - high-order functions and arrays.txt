@@ -1,0 +1,116 @@
+High order funbctions methods for working with arrays:
+
+01 - MAP
+The Map Method serves to perform transformations on arrays. It is possible to create a new array from an existing array. Map creates a new array, it doesn't modify the original array. This transformation occurs for each element of the array, traversing each element and, from this iteration, creates the new array.
+
+From the array below, create a new array with just the characters' names:
+
+const characters = [
+   { level: 42, name: "Thrall", race: "Orc", class: "Shaman" },
+   { level: 28, name: "Garrosh", race: "Orc", class: "Warrior" },
+   { level: 35, name: "Varok", race: "Orc", class: "Warrior" },
+   { level: 35, name: "Uther", race: "Human", class: "Paladin" },
+   { level: 26, name: "Jaina", race: "Human", class: "Mage" },
+   { level: 39, name: "Tyrande", race: "Night Elf", class: "Priestess" },
+   { level: 29, name: "Muradin", race: "Dwarf", class: "Warrior" },
+]
+//Without using the Map:
+let names = []
+for (let i = 0; i < characters.length; i++) {
+   const characters = characters[i]
+   names.push(character.name)
+}
+console.log(names)
+
+//Using the Map method:
+let names = characters.map(function (character){
+   return character.name
+})
+
+
+02 - FILTER
+The Filter Method serves to filter the elements of an array, selecting specific elements from an existing array, creating a new array. Like map, it is also a high-order function.
+
+Using the character array, filter for only those characters of the 'orc' race.
+
+// without the filter method:
+let orcs = []
+for (let i = 0; i < characters.length; i++) {
+   if(characters[i].race === 'orc'){
+     orcs.push(characters[i])
+   }
+}
+console.log(orcs)
+
+//Using the Filter
+let orcs = characters.filter(function (character){
+   return character.race === 'Orc' // condition that is accepted, passes through the filter
+})
+
+03 - REDUCE
+It is also a method for transforming arrays, that is, it creates a new array based on an existing array. Reduce serves to transform an array into another value, be it a string, an object, a number, etc. The reduce returns a value, but that value is constructed (changed) as the reduce runs, while iterating over the array elements
+
+Using the recude method, sum the levels of the characters in the array.
+
+let totallevel = characters.reduce(function(accumulatedValue, character){
+   return AccumulatedValue + character.level
+}0)
+// 0 is the initial value assigned to the reduce, before starting to add the levels.
+
+Another example: using reduce, transform the characters array into an object, grouping the elements by race
+
+let races = characters.reduce(function (accumulatedValue, character){
+   if (accumulator[character.race]) {
+     accumulator[character.race].push(character)
+   } else {
+     accumulator[character.race] = [character]
+   }
+   return accumulator
+}, {})
+
+
+04 - SORT
+It is used to sort arrays, changing the position of array elements. This method changes the array to which it is applied, unlike the other methods, it does not create a new array.
+A difference from Sort is that its callback function receives two parameters, which are two elements of the array, because the way sort works is by performing a comparison in pairs in order to sort the array
+Using the character array, we'll sort the array based on each character's level.
+
+characters.sort(function(a, b){
+   return a.level - b.level
+   // if the result is positive, a is greater than b, and must be later in the array. If negative, a is less than b and must go first in the array. If it is zero, the two are equal and the position is maintained.
+})
+console.log(characters)
+
+To use sort without modifying the original array, a viable solution is to use slice, which returns a copy of the array. The method would then look like this:
+let charactersOrdered = characters.slice().sort(function(a, b){
+   return a.level - b. level
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

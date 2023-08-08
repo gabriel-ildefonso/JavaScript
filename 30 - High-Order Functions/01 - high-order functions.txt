@@ -1,0 +1,69 @@
+A high-order function is nothing more than a function that takes another function as a parameter.
+
+function calculate(a, b, operation){ //note that the 'operation' parameter is a function, but it is declared without parentheses
+   console.log('performing an operation')
+   const result = operation(a, b)
+   return result
+}
+
+In the case presented, we say that the outermost function, 'calculate', is a high-order function.
+One of the applications is to transform the behavior of a function.
+
+function calculate(a, b, operation){
+   console.log('performing an operation')
+   const result = operation(a, b)
+   return result
+}
+
+function sum(x, y){
+   console.log('Performing a sum.')
+   return x + y
+}
+
+calculate(3, 5, sum)
+>>> 8 //With this, we inform 3 and 5 as parameters of the calculate function, and the 'sum' function replaced the 'operation' function inside the 'calculate' function
+
+It is also possible to use high-order functions with anonymous functions.
+
+calculate(8, 4, function(x, y){
+   console.log('performing a subtraction')
+   return x - y
+})
+>>>
+4
+
+Another example of applying high-order functions
+
+function displayElement(element, index, array){
+   console.log({
+     element,
+     index,
+     array
+   })
+}
+
+const list = ['apple', 'banana', 'orange', 'lemon']
+
+for (let i = 0; i < list.legth; i++){
+   displayElement(list[i], i, list)
+}
+>>>
+'apple', index: 0, array ....
+
+
+Another example of a high-order function is the 'forEach' method, which serves to execute a function for each item in an array.
+
+list.forEach(displayElement) //for each list item, execute function displayElement
+>>> returns the same result, but with much less work
+
+It is also possible to use 'forEach' with anonymous functions:
+lita.forEach(function(element, index, array) {
+   console.log({
+     element,
+     index,
+     array
+   })
+})
+
+
+The use of 'forEach' makes the code much more readable, using the functional paradigm and is much more organized.

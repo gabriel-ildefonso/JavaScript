@@ -1,0 +1,1540 @@
+TIPOS DE DADOS
+
+Dados podem ser representados de diferentes formas, os tipos primitivos do JavaScript são:
+number e bigint: tipos numéricos. Number serve tanto para inteiros como para ponto flutuante. Bigint é utilizado para representar números inteiros muito grandes, para ativar essa funcionalidade basta adicionar "n" ao final do número inteiro.
+string: Pode ser tratado como uma cadeia de caracteres, o dado deve estar entre aspas (simples ou duplas, mas deve ser padronizados).
+boolen: valores lógicos, true ou false.
+null e undefined: vazio ou não-definido
+
+Tipos mais avançados (não-primitivos):
+Objetos: É uma estrutura, um conjunto, de várias informações, que permite armazenar vários valores diferentes.
+Função: Um procedimeto a ser executado
+
+VARIÁVEIS
+São alocações na memória que recebem dados a serem utilizados no código, referenciando o nome da variável. Podem ser criadas com o uso das palavras reservadas var, let e const.
+var ano = 2023
+let ano = 2023 //let é uma maneira mais moderna de se criar variáveis que podem ser alteradas no decorrer do código.
+const ano = 2023 //const cria um valor constante, que não pode ser alterado no decorrer do código.
+
+JavaScript é uma linguagem de tipagem dinâmica e fraca, que significa que as variáveis podem ter os seus tipos alterados, e a linguagem irá tentar corrigir erros, como somar number e string, nesse caso o navegador irá converter o number para string e concatenar.
+
+Nomeando variáveis
+Devem ser utilizados nomes significativos para as variáveis, de modo a deixar o código de fácil interpretação.
+Cases: Forma com que os nomes são escritos, não podem ser utilizados espaços. Usa-se diferentes formas de se escrever:
+camelCase:a partir da segunda palavra as palavras iniciam com letra maiúscula //nomeDoUsuario
+snake_case: Usa-se o underline para separar palavras //nome_do_usuario
+
+OPERADORES E EXPRESSÕES
+Operadores: Permitem interações entre valores de variáveis. Podem ser:
+	Aritméticos: +, -, *, /, %
+	Agrupamento: ()
+	Atribuição: =, +=, -=, *=, /=, %=
+	Encadeamento: é o ponto no meio do nome da função, para juntar expressões e criar funções.
+	Incrementar e Decrementar: ++, --
+Expressão: Linha de código que utiliza operadores.
+
+COMENTÁRIOS
+São linhas de código que será ignoradas pelo interpretador. Servem para deixar anotações, ajudar a entender o código e documentar ações.
+// - comentário de uma linha
+/* (...) */ - comentário de várias linhas
+
+
+JAVASCRIPT EM UMA PÁGINA WEB
+
+No corpo do html, pode-se utilizar a tag <script> e dentro dela inserir o código.
+<script>
+	let name = 'Gabriel"
+	let idade = 30
+
+	console.log(name)
+	console.log(idade)
+</script>
+Essa alternativa não é a ideal, pois pode deixar o arquivo html muito extenso e causar lentidão no carregamento, bem como dificuldade na manutenção. O ideal é criar um arquivo JavaScript separado, assim como se faz com o CSS:
+<script src="./nome_do_arquivo.js> </script>
+
+é possivel inserir mais de um arquivo .js no navegador, eles serão lidos e executados na ordem em que forem inseridos:
+<script src="./arquivo1.js> </script>
+<script src="./arquivo2.js> </script>
+
+RECURSOS NATIVOS DO NAVEGADOR
+console.log() = escreve no console
+console.error() = escreve com a tipografia de erro (vermelho)
+console.warn() = escreve com a tipografia de aviso (amarelo) 
+
+window = representa a janela do navegador. 
+window.alert() = cria um alerta na tela, tipo um pop-up
+window.promp() = permite que o usuário insira uma mensagem no console.
+window.confirm() = serve para mostrar uma imagem de confirmação, retornando um valor booleano, true para sim e false para não.
+Window é o objeto global do navegador, quer dizer que todas as funções associadas a Window (alert, prompt, confirm, etc) estão disponíveis para uso sem a necessidade de se colocar "window" antes do método, basta apenas invocar o método:
+alert(olá mundo!)
+
+
+COMPARAÇÃO DE DADOS
+
+Operadores
+
+== e === > O primeiro operador compara valores, o segundo compara inclusive o tipo de dado
+	// 10 == '10' true;  10 === '10' false.
+
+!= e !== > funcionam da mesma maneira da igualdade.
+	// 5 ! = '5' false	5 !== '5' true 
+
+>,<,>=,<= funcionam tal como na matemática
+
+
+OPERADORES LÓGICOS
+
+&& - operador "e"
+
+Só retornará "verdadeiro" se ambos os valores forem verdadeiros
+	true&&true === true
+	true&&false === false
+	false&&true === false
+	false&&false === false
+
+
+|| - operador "ou"
+
+Só retornará "falso" se ambas as partes forem falsas
+	true||true === true
+	true||false === true
+	false||true === true
+	false||false === false
+
+
+! - operador "não"/"not"/"¬"
+
+Inverte o resultado, de verdadeiro para falso e vice-versa
+	!true === false
+	!false === true
+
+
+ESTRUTURAS CONDICIONAIS
+
+IF e ELSE
+Permite criar blocos de código que serão executados somente quando uma determinada operação lógica for verdadeira
+Blocos de código que só serão executados se uma determinada condição (operação lógica) for atendida/verdadeira. Se a expressão utilizada como condição não retornar um valor booleano, o JavaScript irá então tentar converter o resultado da expressão para um valor booleano.
+
+IF condição === true ENTÃO  execute
+
+if (6 === 6) {
+	console.log("true")
+}
+
+Além disso, pode ser usado o ELSE (senão) para acrescentear um bloco de código que será executado somente quando a mesma condição lógica for falsa.
+
+if (6 === 6) {
+	console.log("true")
+} else{
+	console.log("false")
+}
+
+Sintaxe:
+
+IF condição === true ENTÃO execute1 ELSE execute2
+
+Operador ternário junção do IF e ELSE na mesma linha
+let resultado = condição ? valor_se_verdadeiro : valor_se_falso
+
+SWITCH
+Permite criar blovos condicionais como o IF, porém com uma estrutura que avalia uma expressão e testa o resultado contra vários casos pré-determinados, executando os casos correspondentes. É possível definir o caso padrão, que sempre é executado. Também é possível parar a execução após algum dos casos.
+
+SWITCH (expressão){
+  CASO a: 
+ 	execute_a
+  CASO b: 
+	execute_b e PARE
+  CASO c: 
+	execute_c
+  DEFAULT: faça_sempre_isso
+}
+
+const medida = parseFloat(prompt("Insira uma medida em metros:"))
+const unidade = prompt(
+  "Para qual unidade de medida deseja converter?" +
+  "\n1 - milímetros (mm)" +
+  "\n2 - centímetros (cm)" +
+  "\n3 - decímetros (dm)" +
+  "\n4 - decâmetros (dam)" +
+  "\n5 - hectômetro (hm)" +
+  "\n6 - quilômetro (km)"
+
+switch (unidade) {
+  case "1":
+    alert("Resultado: " + medida + "m = " + medida * 1000 + "mm")
+    break
+  case "2":
+    alert("Resultado: " + medida + "m = " + medida * 100 + "cm")
+    break
+  case "3":
+    alert("Resultado: " + medida + "m = " + medida * 10 + "dm")
+    break
+  case "4":
+    alert("Resultado: " + medida + "m = " + medida / 10 + "dam")
+    break
+  case "5":
+    alert("Resultado: " + medida + "m = " + medida / 100 + "hm")
+    break
+  case "6":
+    alert("Resultado: " + medida + "m = " + medida / 1000 + "km")
+    break
+  default:
+    alert("Opção inválida!")
+    break
+}
+
+ESTRUTURA DE REPETIÇÃO
+Estruturas de repetição servem para executar um mesmo bloco de código várias vezes. Todas as estruturas de repetição aceitam o "break" para parar a repetição a qualquer momento.
+
+WHILE
+Serve para criar um laço de repetição que será executado enquanto uma determinada condição for verdadeira. 
+ATENÇÃO: É importante que sempre exista uma forma da condição se tornar falsa, ou então o bloco ficará se repetindo para sempre.
+
+while (condição){
+execute
+}
+
+
+DO WHILE
+Muito parecido com o WHILE, mas esse garante que o comando seja executado pelo menos uma vez, ainda que a condição seja falsa. Pois o bloco de comando é criado antes da condição, se esta for verdadeira executará novamente..
+do{
+//comandos
+}while(condição)
+
+
+FOR
+Também serve para realizar repetições, poré, com uma estrutura diferente do "while" e "do while". 
+
+Ele existe para abreviar o código em casos que seguem essa estrutura específica.
+
+Inicialização: instrução que é executada antes de tudo;
+Condição: condição semelhante ao 'while', é testada antes da execução do bloco de repetição
+Finalização: expressão executada após o bloco de repetição
+
+PARA inicialização; condição; finalização DO_SOMETHING
+
+Cada uma dessas estruturas é opcional, mas o ";" deve constar dentro da estrutura, para indicar que a falta de elementos é intencional
+
+
+Um exemplo de uso comum do for é quando queremos iterar um número fixo de vezes, como uma vez para cada letra de uma palavra, ou uma vez para cada item de uma lista.
+
+Sintaxe:
+for(inicialização; condição; finalização){
+	comando
+}
+
+for (let i=0; i<=10; i++){
+	alert(i)
+}
+
+	tabuada com for
+tabuada de 1 a 20 do número informado pelo usuário
+
+let x = prompt(informe o número para a tabuada:)
+
+for (i=1;i<=20; i++){
+	alert(i*x)
+}
+
+	procurando palíndromos
+const word = prompt(informe a palavra a ser verificada:)
+let palavraInvertida = ""
+
+for let i=palavra.lenght-1; i>=0; i--){
+	palavraInvertida += palavra[i]
+}
+
+if (palavra === palavraInvertida){
+	alert(palavra + " é um palíndromo")
+else{
+	alert(palavra + " não é um palíndromo")
+}
+
+
+ESTRUTURAS DE DADOS
+
+São um modo particular de armazenar e organizar dados complexos de modo que possam ser utilizados de maneira eficiente, facilitando sua busca e modificação.
+
+Estruturas de dados clássicas: 
+	>Lista ligada 	- Coleção ordenada de valores onde cada elemento aponta para o próximo. 
+	>Array		- Coleção de elementos que podem ser identificados por um índice.
+	>Fila (Queue) 	- Coleção de elementos onde o primeiro elemento a ser retirado deve ser o primeiro elemento adicionado. Também chamadas de listas FIFO (first-in/first-out), primeiro que entra/primeiro que sai.
+	>Pilha (Stack) 	- Coleção de elementos em que o primeiro elemento a ser retirado deve ser o último elemento adicionado. Também chamadas de listas LIFO (last-in/first-out), último que entra/primeiro que sai.
+	>Árvore (Tree)	- Conjunto de elementos chamados de nós (nodes) organizados em estruturas hierárquica (não sequencial), ou seja, podendo estar "abaixo" ou "acima" de outros nós. Funciona como uma árvore genealógica, estrutura de pastas em um computador.
+
+
+ESTRUTURAS DE DADOS NO JAVASCRIPT ( e outras linguagens de programação de alto-nível):
+
+	>Listas (Arrays)             -
+	>Dicionários (Objetos)  -
+
+VALOR E REFERÊNCIA
+
+	Valor - É um valor escrito na memória (por mais redundante que isso possa parecer)
+	Referência - Locais onde os dados são armazenados dentro de uma estrutura de dados, podendo ser criadas cópias emuladas de dados //array2 = array
+let array1 = [1, 4, 6, 2]
+let array2 = array1
+
+array2[0] = 5
+console.log(array2) 	//[5, 4, 6, 2]
+console.log(array1)		//[5, 4, 6, 2]
+
+Criamos um array, e depois criamos outro array que recebeu os mesmos valores do primeiro. Ao editarmos o primeiro elemento do segundo array (cópia), o primeiro elemento do primeiro array também foi alterado. Issoa contece pois no JavaScript, quando trabalhamos com os tipos primitivos, eles tem valores individuais para cada uma das variávels criadas. No caso dos arrays e objetos, são utilizadas as referências. Quando criamos um array, e depois criamos outro array cópia do primeiro, não é criada uma nova variável para o segundo array, de modo que não há espaço na memória do computador reservado para o segundo array, ele é, para todos os efeitos, um gêmeo do primeiro array, todas as alterações no segundo array irão alterar o primeiro array.
+
+ARRAY (VETORES)
+
+É uma estrutura do JavaScript para se trabalhar com todo tipo de lista. Seus elementos são identificados por um índice inteiro começando pelo 0. Pode armazenar qualquer tipo de dado e ter qualquer tamanho. 
+
+Pode ser criado e utilizado através de colchetes "[]", com seus elementos separados por vírgula // let array = [0,1,2,3,4]
+let array = []
+array[0] = "olá"
+array[1] = 42
+
+Possuem funções para vários casos de usos:
+	- Enfileirar e desenfileirar um elemento
+	- Empilhar e desempilhar
+	- Achar o índice de um valor
+	- Cortar e concatenar
+	- etc
+Para usar a função, basta usar nome_do_array.nome_da_função
+
+array.push - adiciona elemento ao final do array
+array.unshift - adiciona elemento no começo do array, empurrando os elementos para um índice superior
+array.pop() - remove o último elemento do array. Os parênteses devem ficar vazios, por ser uma função 
+array.includes(valor) - verifica se "valor" está presente dentre os elementos do array, retornando um valor booleano
+array.indexOf("valor")  - verifica se "valor" está presente dentre os elementos do array, retornando o índice desse "valor" dentro do array
+array.slice(índice_inicial , índice_final) - cria uma cópia do array original, com os elementos que estão entre os índices fornecidos do array original  //O índice final é exclusive, não é incluído no novo array. array.slice(0,4) = [0,1,2,3]
+
+concat() - comando para concatenar array com outros arrays e/ou valores, podendo ser criada uma nova array
+const sociedade = hobbits.concat(elfos, 'Boromir') >> Cria uma nova array contendo os valores dos arrays hobbits, elfos e o elemento 'Boromir'.
+
+// Substituição de elementos (splice)
+array.splice(indice_que_inicia_a_remoção, quantidade_de_itens_removidos, elemento_que_substituirá_o_removido, elemento_adicionado1, elemento_adicionado2, ... ) //retorna os elementos removidos do array  
+
+//iterar sobre os elementos do array
+for (let i=0; i<array.lenght; i++){
+    const elemento = array.[i] 
+    console.log(elelento + " se encontra na posição " + i)
+}
+
+
+			Programa de fila de espera
+Escreva um programa em javascript para simular uma fila de espera em um consultório médico. O programa deve iniciar mostrando na tela um menu interativo contendo a lista de todos os pacientes esperando em ordem mostrando sua posição ao lado do nome (ex.: 1º Matheus, 2º Marcos, etc). O menu também deve permitir escolher entre as opções de “Novo paciente”, para adicionar um novo paciente ao fim da fila (pedindo o nome do paciente), “Consultar paciente”, que retira o primeiro paciente da fila e mostra na tela o nome do paciente consultado, e “Sair”. O programa só deve ser encerrado ao escolher a opção de “Sair”, caso contrário deve voltar ao menu.
+
+let fila = []
+let opcao = ""
+
+do {
+  let pacientes = ""
+  for (let i = 0; i < fila.length; i++) {
+    pacientes += (i + 1) + "º - " + fila[i] + "\n"
+  }
+
+  opcao = prompt(
+    "Pacientes:\n" + pacientes +
+    "\nEscolha uma ação:\n1 - Novo paciente\n2 - Consultar paciente\n3 - Sair"
+  )
+
+  switch (opcao) {
+    case "1":
+      const novoPaciente = prompt("Qual é o nome do paciente?")
+      fila.push(novoPaciente)
+      break
+    case "2":
+      const pacienteConsultado = fila.shift()
+      if (!pacienteConsultado) {
+        alert("Não há pacientes na fila!")
+      } else {
+        alert(pacienteConsultado + " foi removido da fila.")
+      }
+      break
+    case "3":
+      alert("Encerrando...")
+      break
+    default:
+      alert("Opção inválida!")
+      break
+  }
+} while (opcao !== "3");
+
+
+
+			Programa de pilha de cartas
+Escreva um programa em javascript para simular um baralho de cartas. O programa deve iniciar mostrando na tela um menu interativo contendo a quantidade de cartas que estão atualmente no baralho e as opções de “Adicionar uma carta”, “Puxar uma carta” e “Sair”. Ao escolher “Adicionar uma carta”, o programa deve perguntar o nome da carta e adicioná-la no topo do baralho. Ao escolher “Puxar uma carta”, o programa deve retirar a carta do topo do baralho e mostrar na tela o nome da carta puxada. O programa só deve ser encerrado ao escolher a opção de “Sair”, caso contrário deve voltar ao menu.
+
+const baralho = []
+let opcao = ""
+
+do {
+  opcao = prompt(
+    "Cartas no baralho: " + baralho.length +
+    "\n1. Adicionar uma carta\n2. Puxar uma carta\n3. Sair"
+  )
+
+  switch (opcao) {
+    case "1":
+      const novaCarta = prompt("Qual é a carta?")
+      baralho.push(novaCarta)
+      break
+    case "2":
+      const cartaPuxada = baralho.pop()
+      if (!cartaPuxada) {
+        alert("Não há nenhuma carta no baralho!")
+      } else {
+        alert("Você puxou um(a) " + cartaPuxada)
+      }
+      break
+    case "3":
+      alert("Saindo...")
+      break
+    default:
+      alert("Opção inválida!")
+  }
+
+} while (opcao !== "3");
+
+
+ARRAYS BIDIMENSIONAIS (MATRIZES)
+Um array bidimensional, basicamente, é um array que contém outro array dentro dele.
+const arr=[
+	[A1, B1, C1],
+	[A2, B2, C2],
+	[A3, B3, C2]
+]
+console.log(arr)
+	
+retorno:
+A1, B1,C2
+A2,B2,C2
+A3,B3,C3
+
+é possível criar com tantas dimensões quanto se desejar. 
+Para referenciar um item específico dentro da matriz, basta referenciar o índice do array, e depois indicar o índice do objeto, colocando colchetes para fazer tal referência.
+Ex: console.log(arr[1][2]) 
+retorno: C2
+
+console.table() =  Parecido com o console.log, porém, além de apenas exibir os valores, ele vai tentar exibir os valores em formato de tabela 	
+ex:
+console.table(arr)
+index	0	1	2
+0	A1	B1	C1
+1	A2	B2	C2
+2	A3	B3	C3
+
+Também é possível iteerar sobre matrizes, usando as funções de arrays
+arr[0].push("D1")
+console.table(arr)
+index	0	1	2	3
+0	A1	B1	C1	D1
+1	A2	B2	C2
+2	A3	B3	C3
+
+for(let i=0; i<arr.lenght; i++){
+	for(let j=0; j<arr[i].length;j++){
+		const elemento = arr[i][j]
+		console.log('Posição: (" + i + ", "+ j + ") Valor: " +  elemento
+	}
+}
+retorno:
+Posição (0,0) Valor: A1
+Posição (0,1) Valor: B1
+...
+
+
+OBJETOS
+Objeto é uma estrutura para se trabalhar com dicionário chave:valor. O par chave:valor em um objeto é chamado de propriedade; a chave é o nome da propriedade, o valor é o valor que está armazenado nessa propriedade (semelhante aos valores armazenados em variáveis).
+Se a chave tiver o mesmo nome que o valor, basta declarar o nome da chave. O javaScript vai entender.
+"nome: nome" é o mesmo que apenas "nome"
+Diferente dos arrays, os elementos de um objeto não possuem uma ordem definida, não havendo uma sequência.
+Uma propriedade pode ter string, números e booleanos como chaves, e podem armazenar qualquer tipo de dado como valor.
+O objeto pode ser criado usando chaves {} - let objeto = {}
+Suas propriedades e funções podem ser referenciadas por encadeamentos com ponto "." ou colchetes "[]"
+objeto.prop = "olá mundo"
+objeto.executar()
+
+		
+			Exercício de cadastro de imóveis
+Escreva um programa em javascript que funcione como um cadastro de imóveis e atenda aos seguintes requisitos:
+
+- Deve ter um menu interativo que sempre é exibido até que o usuário escolha sair.
+- O menu interativo deve mostrar no topo a quantidade de imóveis cadastrados.
+- O menu deve ter a opção de salvar um imóvel.
+- Para salvar um novo imóvel o programa deve pedir as seguintes informações:
+    - Nome do proprietário.
+    - Quantidade de quartos.
+    - Quantidade de banheiros.
+    - Se possui garagem.
+- O menu também deve ter a opção de mostrar todos os imóveis salvos.
+
+
+FUNÇÕES
+Uma fuinção é uma estrutura que permite declarar um procedimento e executá-lo programaticamente.
+Uma função deve ser vista como: Entrada > Procedimento > Saída
+Tanto a entrada quanto a saída de uma função são opcionais, ou seja, uma função pode existir sem um deles ou sem ambos.
+As entradas da função são chamadas de parâmetros ou argumentos.
+As saídas da função são chamadas de retorno
+Para que a fução seja executada, além de definir uma saída, é preciso "chamar a função", indicando o nome_da_função()
+
+Sintaxe:
+function nome_da_função(entradas){
+	procedimentos
+retorno saída
+
+function ola(){
+	console.log('olá mundo!')
+}
+
+ola()
+
+PARÂMETROS DA FUNÇÃO
+São as entradas, aquilo que é entregue à função para que ela possa realizar seu procedimento. Os parâmetros da função devem ser declaradas dentro dos parênteses no momento em que a função é criada.
+O parâmetro funciona como uma variável que fica disponível dentro da função, mas essa variável só é informada no momento em que se chama a função.
+Qualquer parâmetro que não for definido, o JavaScript irá tratar como undefined
+Ex:
+function dobro(x) {
+	alert('O dobro de " + x + " é " + (x*2))
+}
+
+dobro(5)
+
+resultado:
+O dobro de 5 é 10
+
+Se o valor do parâmetro não for declarado o resultado da função será NaN (Not a Number), resultado em:
+O dobro de undefined é NaN
+
+Para o caso de o parâmetro não ser informado, é possível definir um valor padrão e evitar o comportamento undefined:
+
+function ola(nome = 'mundo'){
+	alert('Olá, '+ nome + "!")
+}
+
+ola('Gabriel')
+ola()
+
+resultado:
+Olá, Gabriel!
+Olá, mundo!
+
+Para se declarar mais de um parâmetro, basta separá-los por vírgula
+function soma(a,b){
+    alert('A soma de ' +a+ " e " +b+ " é igual a: " + (a+b))
+}
+soma(7,8)
+
+resultado:
+A soma de 7 e 8 é igual a 15
+
+function criarUsuario(nome, email, senha, tipo = "admin") {
+    const usuario = {
+        nome,	//mesmo que nome: nome
+        email,
+        senha,
+        tipo
+  }
+    console.log(usuario)
+}
+
+criarUsuario("gabriel", "gabriel@email.com", '1234')
+retorno
+nome: gabriel
+email: gabriel@email.com
+senha: 1234
+tipo: admin	//o tipo seria undefined pois não foi informado, mas como o tipo padrão foi definido como admin, o erro não aconteceu
+
+
+Ao se definir parâmetros para a função, a ordem é muito importante. Os parâmetros que receberem valores padrão deverão ser sempre os últimos a serem definidos. 
+Ex:
+function criarUsuario(nome, email, senha, tipo = "admin")	//função OK
+function criarUsuario(nome, tipo = "admin", email, senha)	// função irá dar erro, poi entende-se que aquilo que não se deja informar deva ser a última entrada da função.
+
+Função com objeto como parâmetro
+Para melhorar a legibilidade do código, se uma função for receber muitos parâmetros, uma solução viável é criar apenas um parâmetro que seja um objeto
+
+function parametrosDoJeitoErrado(nome, telefone, endereco, aniversario, email, senha) {
+//	Perceba que são muitas informações que devem ser lançadas
+}
+
+Usando um objeto como parâmetro:
+
+function objetoComoParametro(usuario){
+    usuario.nome
+    usuario.email
+    ...
+}
+
+const dadosDoUsuario
+  nome: "",
+  telefone: "",
+  email: "",
+  senha: "",
+  aniversario: "",
+  endereco: ""
+}
+parametrosDoJeitoCerto(dadosDoUsuario)
+// Além de facilitar na chamada da função, a ordem dos parâmetros se torna irrelevante.
+
+
+RETORNO DE UMA FUNÇÃO
+Nada mais é do que a saída que a função informa. 
+function calcularMedia(a,b){
+    const media = (a + b ) / 2
+}
+
+uma possibilidade dentro do JavaScript é atribuir o retorno de uma função a uma variável, assim é possível trabalhar com o retorno da função fora da própria função. Para tanto, deve haver na função o comando "return" para que quando a função for instanciada ela não dê como resultado a expressão "undefined".
+
+function calcularMedia(a, b){
+    const media = (a +b) / 2
+    return			//O uso do return torna possível chamar a variável media fora da função
+}
+const resultado = calcularMedia(7,2)
+console.log(resultado)
+>>>>
+4.5
+
+function criarProduto(nome, preco){
+    const produto = {
+       nome,
+       preco,
+    }
+    retun produto
+}
+const notebook = criarProduto("notebook intel", 2500)
+console.log(notebook)
+
+Também é possivel utilizar o retorno de uma função diretamente como um valor.
+let numero = parseFloat(prompt('informe um número: '))
+
+O retorno de uma função pode ser qualquer expressão, inclusive uma outra função.
+
+function areaRetangular(base, altura) {
+    return base * altura
+}
+
+function areaQuadrada(lado){
+    return areaRetangular(lado, lado)
+}
+
+Uma função só pode retornar uma única vez
+function ola() {
+    let texto = '...'
+    return texto
+    texto = 'olá mundo'
+    console.log(texto)
+}
+console.log(ola))
+>>>>>>>>
+...		qualquer alteração informada após o primeiro "return" foi ignorada	
+
+Há casos particulares em que a função pode receber mais de um return, como em casos condicionais
+function maioridade (idade){
+    if (idade >= 18 {
+       return "Maior de idade"
+    }else{
+       return "Menor de idade"
+    }
+}
+
+console.log(maioridade(29)
+console.log(maioridade(13)
+>>>>>>>>>>>>>>>>>>>
+Maior de idade
+Menor de idade
+
+
+ESCOPO
+Escopo nada mais é do que o contexto em que a variável foi declarada, e pode ser mais externo ou mais interno (a uma função). 
+Uma variável declarada em um escopo mais externo podem ser utilizadas em escopos mais internos.
+// Uma variável declarada fora de uma função pode ser usada dentro da função. Mas uma variável declarada dentro de uma função não pode ser utilizada fora dela.
+
+Variáveis criadas com "var" em blocos lógicos (if, else) ficam disponíveis para escopos mais externos. Porém o mesmo não acontece com funções: variáveis criadas com 'var' dentro de funções não ficam disponíveis para escopos mais externos.
+
+Variáveis criadas com 'var' são carregadas no início do programa, ainda que sejam declaradas no final do código, como se estas fossem içadas para o início do código. Porém são criadas sem a atribuição de valor, sendo 'undefined'. 
+
+console.log(nome)
+console.log(sobrenome)
+
+var nome = 'gabriel'
+let sobrenome = 'silveira'
+
+console.log(nome)
+console.log(sobrenome)
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+undefined					
+error: cannot acess 'sobrenome' before inicialization  line 2
+
+			CALCULADORA GEOMÉTRICA USANDO O MÁXIMO DE FUNÇÕES POSSÍVEIS
+	
+//Primeiro iremos criar as funções que serão utilizadas nos cálculos
+
+function areaTriangulo() {
+  const base = prompt("Informe a base do triângulo:");
+  const altura = prompt("Informe a altura do triângulo: ");
+
+  const area = (base * altura) / 2;
+  return area;
+}
+function areaRetangulo() {
+  const base = prompt("Informe a base do retângulo:");
+  const altura = prompt("Informe a altura do retângulo:");
+
+  const area = base * altura;
+  return area;
+}
+function areaQuadrado() {
+  const lado = prompt("Informe o valor do lado do quadrado:");
+  const area = lado * lado;
+  return area;
+}
+function areaTrapezio() {
+  const baseMaior = parseFloat(prompt("Informe a base maior do trapézio:"));
+  const baseMenor = parseFloat(prompt("Informe a base menor do trapézio:"));
+  const altura = prompt("Informe a altura do trapézio:");
+  const area = ((baseMaior + baseMenor) * altura) / 2;
+  return area;
+}
+function areaCircunferencia() {
+  const raio = prompt("Informe o raio da circunferência:");
+  const area = 3.14 * (raio * raio);
+  return area;
+}
+
+//Diferente de criar um menu com prompt, vamos criá-lo por meio de uma função:
+function exibirMenu() {
+  return prompt(
+    "Esta é uma calculadora geométrica\n" +
+      "Informe a opção desejada:\n" +
+      "1. Calcular a área de um triângulo\n" +
+      "2. Calcular a área de um retângulo\n" +
+      "3. Calcular a área de um quadrado\n" +
+      "4. Calcular a área de um trapézio\n" +
+      "5. Calcular a área de um círculo\n" +
+      "6. Encerrar programa"
+  );
+}
+// Agora a função que irá chamar a função selecionada no menu
+function executar() {
+  let opcao = "";
+
+  do {
+    opcao = exibirMenu();
+    let resultado;
+
+    switch (opcao) {
+      case "1":
+        resultado = areaTriangulo();
+        break;
+      case "2":
+        resultado = areaRetangulo();
+        break;
+      case "3":
+        resultado = areaQuadrado();
+        break;
+      case "4":
+        resultado = areaTrapezio();
+        break;
+      case "5":
+        resultado = areaCircunferencia();
+        break;
+      case "6":
+        alert("Encerrando programa");
+        break;
+      default:
+        alert("Opção inválida.");
+    }
+    if (resultado) {
+      alert("Área = " + resultado);
+    }
+  } while (opcao !== "6");
+}
+//Por fim, após criar todos os mecanismos, vamos executar o programa chamando a função:
+executar()
+
+
+MÉTODOS
+Métodos nada mais são do que funções atreladas a objetos
+let pessoa = {
+    nome: 'gabriel',
+    idade: 29
+}
+console.log(pessoa)
+>>>>>>>>>>>>>>>>>
+nome: gabriel
+idade: 29
+
+Para se criar um método, ou seja, inserir uma função em um objeto, basta declarar a função dentro do corpo do objeto, porém sem a palavra 'function', bastando nomeDaFunção(){}
+
+let pessoa = {
+    nome: 'gabriel',
+    idade: 29,
+    dizerOla() {
+       console.log('Olá, Mundo!')
+    }
+}
+
+console.log(pessoa.dizerOla())
+>>>>>>>>>>>>>>>>>>>>>
+Olá, Mundo!
+
+Além de inserir funções dentro de objetos, é possível referenciar dentro dos objetos o próprio objeto, usando a palavra reservada 'this'
+let pessoa = {
+    nome: 'gabriel',
+    idade: 29,
+    dizerOla() {
+       console.log('Olá, mundo! Meu nome é ' + this.nome)		
+    }
+}
+//a palavra 'this' remete ao objeto no qual a função está inserida, não sendo necessário usar o nome do objeto
+
+
+FUNÇÕES RECURSIVAS
+
+uma função recursiva é uma função que chama a ela mesma, o que cria uma pilha de chamada de funções que vão se repetindo.
+function dividir(num) {
+    console.log(num)
+    if (num % 2 === 0){	
+       dividir(num / 2)
+    }else{
+       return(num)}
+}
+//Uma função que retorna o número informado e vai dividindo e retornando enquanto o número for par
+
+dividir(40)
+>>>>>>>>>>>>>>>>>>>>>>>>
+40
+20
+10
+5
+
+Deve-se tomar cuidado para não se exceder a capacidade de pilha de funções, criando um loop infinito, causando um erro. Deve haver, portanto, uma maneira da função parar de chamar a si mesma, o que, em programação, é chamado de caso-base. Em funções recursivas, é importante partir de um caso base para já se evitar um comportamento infinito da função.
+
+	Exemplo prático de função recursiva: Fatorial de um número
+
+function fatorial(num){
+    console.log('Numero: ' + num)
+    if (num === 0){		//caso base
+       return 1
+    } else if (num === 1{
+       return 1
+    } else{
+       return num * fatorial(num - 1)
+    }
+}
+
+
+FUNÇÕES ANÔNIMAS
+
+Funções anônimas são funções que não possuem nome. Um dos casos em que se pode utilizar desse artifício é armazenar funções dentro de variáveis.
+No JavaScript e em outras linguagens que suportam o paradigma funcional, as funções podem ser lidas como valores, passadas como valores, armazenadas em variáveis, como a função somar (abaixo) fosse um valor qualquer
+function somar(a, b){
+    retunr (a+b)
+}
+
+const operação = somar	//Sem os parênteses
+Desse modo, sem os parênteses, operação é igual à função somar; operção se torna, então, a função somar, passando a se comportar dentro do código como se função fosse . Se fosse com os parênteses, operação receberia o resultado da função somar, pois esta está sendo instanciada, chamada
+function somar(a, b){
+    retunr (a+b)
+}
+const operação = somar
+console.log(operação(4,5))
+>>>>>>>>>>>>>>>>>>>>>
+9
+
+const subtrair = function (a, b){	//perceba que a função não tem um nome, apenas recebe parâmetros, funciona pois ela existe dentro
+    return a - b			de uma variável.
+}
+
+console.log(subtrair(5, 4))
+
+Uma utilidade para funções anônimas é poder alterar os comandos de uma função previamente definida:
+Ex:
+function somar(a, b){
+    retunr (a+b)
+}
+let operação = somar		a variável operação é a função somar, que soma a e b
+
+console.log(operação(4,5))
+
+operação = function(a,b) {
+    return a - b			agora a variável operação muda de comportamento, subtraindo a e b
+}
+
+console.log(operação(4,5))
+>>>>>>>>>>>>>>>>>>>>>>>>>>>
+9
+-1
+
+	Perigo com as funções anônimas
+
+Assim como as variáveis criadas com o 'var', uma função nomeada é içada para o começo do arquivo, sendo carregada logo na inicialização da execução do código, sendo executada e tendo seu valor aguardando ser instanciado no decorrer do código. Quando o arquivo é carregado a function já existe. O mesmo não acontece com as funções anônimas, só sendo possível acessá-las após as variáveis nas quais se encontrar serem declaradas.
+olaMundo()
+OiMundo()
+
+function olaMundo() {
+    console.log('Olá, mundo!')
+}
+
+const oiMundo = function() {
+    console.log('Oi, mundo!')
+}
+>>>>>>>>>>>>>>>>>>>>>>>>
+Olá, mundo!
+error: cannot acess 'oiMundo' before inicialization
+
+Corrigindo o erro:
+olaMundo()
+
+function olaMundo() {
+    console.log('Olá, mundo!')
+}
+
+const oiMundo = function() {
+    console.log('Oi, mundo!')
+}
+
+oiMundo()
+>>>>>>>>>>>>>>>>>>>>>>>>
+Olá, mundo!
+Oi, mundo!
+
+
+HIGH-ORDER FUNCTIONS (FUNÇÕES DE ALTA ORDEM)
+
+Uma high-order function nada mais é do que uma função que recebe outra função como parâmetro. Como vimos, no JavaScript é possível utilizar as funções como se estas fossem valores, inclusive armazenando-as em variáveis, o que chamamos de suporte ao Paradigma Funcional de Programação. Um Paradigma de Programação é uma forma de se programar, um método utilizado para se escrever programas, para guiar o desenvolvimento.
+O Paradigma Funcional, como o próprio nome sugere, é voltado para o uso de funções, assim como o Pradigma de Orientação a Objetos (POO), que também é suportado pelo JavaScript, sendo esta uma linguagem multiparadigma.
+
+High-order functions utilizam esse conceito de funções como valores. Da mesma forma que passamos valores como parâmetros de uma função
+
+function calcular (a, b, operação) {	//aqui são passados os parâmetros da função, perceba que 'operação' não possui parênteses
+    console.log('Realizando uma operação')
+    const resultado = operação(a, b)	//aqui o uso de parênteses identifica "operação" como sendo uma função, não apenas um mero         return resultado				parâmentro
+}
+
+A função "calcular", sendo uma função mais externa, dizemos se tratar de uma high-order funtion. Pois como a função "operação" se encontra dentro do escopo da função "calcular", dizems que esta está em um nível inferior àquela.
+
+		Casos de aplicação das High-Order Functions
+Com o uso de high-order functions, podemos fazer com que funções recebem outras funções, de modo que as funções de alta ordem sejam capazes de realizar diferentes operações.
+
+function calcular (a, b, operação) {	
+    console.log('Realizando uma operação')
+    const resultado = operação(a, b)
+return resultado
+}
+
+function somar (x, y) {		//Perceba que a função somar possui dois parâmetros semelhante à função operação
+    console.log('Realizando uma soma.')
+    return x + y
+}
+
+calcular(3, 5, somar)		//Aqui, sem o uso de parênteses, passamos a própria função, de modo que ao chamarmos a função 				calcular, o parâmetro "operação" vai se transformar em "somar", de modo que a variável "resultado" 					receberá o resultado de uma soma.
+
+Com o uso acima das high-order functions a função "calcular" se torna capaz de calcular qualquer coisa.
+Como a high-order function recebe uma função como parâmetro, também podemos usar funções anônimas como parâmetro.
+
+1  function calcular(a, b, operação) {		//criamos a função calcular, que possui três parâmetros
+2      console.log('Realizando uma operação')
+3      const resultado = operação(a, b)		//transformamos o parâmetro operação em uma função, que possui a e b como parâmetros
+4      return resultado
+5  } 
+6
+7  function somar(x, y) {			//criamos a função somar, que soma os parâmetros x e y
+8      console.log('Realizando uma soma')
+9      return x + y
+10 }
+11
+12 console.log(calcular (3, 5, somar))		//chamamos a função calcular, que recebe como parâmetro a função somar, que aqui retorna 	13				a soma de 3 e 5
+14
+15 console.log(calcular(8, 4, function(x, y){	//chamamos a função calcular, que recebe como parâmetro uma função anônima que subtrai x 16					e y, informados como parâmetro da função calcular
+17    console.log('Realizando uma subtração')
+18    return x - y
+19 }))
+>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Realizando uma operação		//resultado da função calcular, linha 2
+Realizando uma soma		//resultado da função somar, linha8
+8				//retorno da soma, linha 12
+Realizando uma operação		// resultado da função calcular, que remete à função na linha 2
+Realizando uma subtração		//resultado da função calcular instanciada na linha 15 e 17
+4				//retorno da função anônima da linha 15
+
+	Outro exemplo do uso de funções anônimas
+function exibirElemento(elemento, indice, array) {
+    console.log({
+       elemento, 
+       indice,
+       array
+    })
+}
+
+const lista = ['maçã', 'banana', 'laranja', 'limão']
+
+for (let i = 0; i < lista.lenght; i++) {
+    exibirElemento(lista[i], i, lista)
+}
+
+MÉTODO FOR EACH
+Esse método serve para executarmos uma função para cada elemento de um array. Esse método nada mais é do que uma high-order function nativa do JavaScript.
+
+array.forEach(funçãoParâmetro)
+
+lista.forEach(exibirElemento) apresenta o mesmo resultado do for criado acima.
+
+
+MÉTODO MAP
+O método map é utilizado pra fazer transformações em arrays, podendo ser possível criar um novo array baseado em um array existente, sem alterá-lo.
+O map percorre cada elemento do array, criando um novo array a cada iteração.
+Para exemplificar, vamos transformar um array de objetos em um array de strings com os nomes dos personagens: 
+const personagens = [
+  { nivel: 42, nome: "Thrall", raca: "Orc", classe: "Xamã" },
+  { nivel: 28, nome: "Garrosh", raca: "Orc", classe: "Guerreiro" },
+  { nivel: 35, nome: "Varok", raca: "Orc", classe: "Guerreiro" },
+  { nivel: 35, nome: "Uther", raca: "Humano", classe: "Paladino" },
+  { nivel: 26, nome: "Jaina", raca: "Humano", classe: "Maga" },
+  { nivel: 39, nome: "Tyrande", raca: "Elfo Noturno", classe: "Sacerdotisa" },
+  { nivel: 29, nome: "Muradin", raca: "Anão", classe: "Guerreiro" },
+]
+
+const nomes = []
+
+		usando o for:
+for (let i = 0; i < personagens.length; i++){
+    nomes.push(personagens[i].nome)
+}
+console.log(nomes)
+
+		usando o map
+
+cons nomes = personagens.map(function(persongem){
+    return personagem.nome
+})
+
+
+MÉTODO FILTER
+Serve para filtrar, selecionar elementos específicos de um array existente, também criando um novo array com os elementos filtrados
+Usando o array de persanagens acima, crie um novo array contendo somente os personagens da raça orc:
+
+				Usando o for
+const orcs = [];
+
+for (let i = 0; i < personagens.length; i++) {
+  if (personagens[i].raca === "Orc") {
+    orcs.push(personagens[i]);
+  }
+}
+console.log(orcs);
+
+				Usando o método map
+const orcs = personagens.filter(function (personagem) {
+  return personagem.raca === "Orc";
+});
+
+console.log(orcs);
+
+MÉTODO REDUCE
+Também é um método para transformar arrays, criando um novo array, porém funciona de maneira mais elaborada.
+O reduce serve para transformar um array em um outro elemento, um outro valor, seja um número, uma string, um objeto, etc. Uma das aplicações mais simples do reduce é fazer uma soma entre os elementos do array. O reduce retorna um valor, mas esse valor é construído (modificado) a cada iteração, acumulando o valor entre as execuções. 
+
+const personagens = [						//Vamos somar os níveis dos personagens
+  { nivel: 42, nome: "Thrall", raca: "Orc", classe: "Xamã" },
+  { nivel: 28, nome: "Garrosh", raca: "Orc", classe: "Guerreiro" },
+  { nivel: 35, nome: "Varok", raca: "Orc", classe: "Guerreiro" },
+  { nivel: 35, nome: "Uther", raca: "Humano", classe: "Paladino" },
+  { nivel: 26, nome: "Jaina", raca: "Humano", classe: "Maga" },
+  { nivel: 39, nome: "Tyrande", raca: "Elfo Noturno", classe: "Sacerdotisa" },
+  { nivel: 29, nome: "Muradin", raca: "Anão", classe: "Guerreiro" },
+]
+
+const nivelTotal = personagens.reduce(function(valorAcumulado, personagem){
+    return valorAcumulado + personagem.nivel
+}, 0								// O '0' é o valor que inicia a variável valorAcumulado
+
+
+Usando o array acima, vamos utilizar o método reduce para criar um objeto que agrupa os persagens por raça
+
+const raças = personagns.reduce(function (valorAcumulado, personagem){
+    if(valorAcumulado[personagem.raça]){
+        valorAcumulado[personagem.push(personagem)
+    }else {
+        valorAcumulado[personagem.raça] = [personagem] 
+    }
+    return valorAcumulado
+}, {} ) 
+
+
+MÉTODO SORT
+É um método que serve para se ordenar arrays, alterando a posição de elementos de um array de acordo com algum critério.
+Vamos novamente utilizar o array de personagens e ordenar os elementos com base no nível de cada personagem.
+
+Diferente dos outros métodos, o sort não cria um novo array, mas sim modifica o array em que está trabalhando.
+
+const personagens = [						
+  { nivel: 42, nome: "Thrall", raca: "Orc", classe: "Xamã" },
+  { nivel: 28, nome: "Garrosh", raca: "Orc", classe: "Guerreiro" },
+  { nivel: 35, nome: "Varok", raca: "Orc", classe: "Guerreiro" },
+  { nivel: 35, nome: "Uther", raca: "Humano", classe: "Paladino" },
+  { nivel: 26, nome: "Jaina", raca: "Humano", classe: "Maga" },
+  { nivel: 39, nome: "Tyrande", raca: "Elfo Noturno", classe: "Sacerdotisa" },
+  { nivel: 29, nome: "Muradin", raca: "Anão", classe: "Guerreiro" },
+]
+
+O método também é uma high-order funtion, ou seja, recebe uma função como parâmetro, porém essa callbackFuntion possui outra estrutura.
+Essa função recebe como parâmetro dois elementos, que são dois elementos do array, pois a maneira como o Sort trabalha é fazendo uma comparação em pares para poder ordenar o array. 
+Para fazer essa ordenação ele vai utilizar o retorno dessa função callBack, no qual ele irá devolver um número negativo, ou um número zero, ou um número positivo. ma própria documentação do método Sort, o método irá usar esse resultado positivo ou negativo para ordenar esses elementos.
+
+Abaixo vemos uma subtração dos parâmetros a e b. Se o nível de a for maior que o de b, o resultado será positivo, com isso o sort irá jogar o a mais adiante no array. Se o resultado for negativo, então o nível de a é menor que o de b, o sort então irá jogar b adiante de a no array.  
+
+personagens.sort(function (a, b) {
+    return a.nivel - b.nivel			
+}
+
+console.log(personagens)		//aqui iremos imprimir o próprio array personagens, pois o método sort não cria um novo array, apenas 				modifica o atual
+
+	E para se fazer na ordem decrescente?
+Basta inverter a ordem do retorno: b.nivel - a.nivel, assim, se o nivel de a for menor que de b, será um número positovo, e irá enviar a para mais adiante do array.
+
+PROBLEMA COM O USO DO SORT
+Perceba que ao se utilizar o sort, ele modifica o array e iça o array modificado para o início do código, de modo que o array modificado será utilizado em todo o programa.
+PARA RESOLVER...
+Uma maneira de se evitar esse problema, uma solução simple é utilizar o slice() antes do sort(), pois o slice retorna uma cópia de uma parte de um array. E se encadearmos um slice sem nenhum parâmetro com o sort, o slice fará uma cópia de todos os elementos e passar essa cópia para o método sort 
+
+const personagensOrdenados = personagens.slice().sort(function (a, b) {
+    return a.nivel - b.nivel			
+}
+
+
+OBJETOS GLOBAIS
+
+São objetos padrão da linguagem JavaScript que ficam sempre disponíveis para utilização.
+ATENÇÃO: Não confundir com o objeto de escopo global window do navegador (ou o escopo global de outros ambientes). Em JavaScript o Escopo Global é o escopo mais externo de todos, onde se escreve diretamente o código, que seria basicamente a janela do navegador. Por isso podemos usar a função alert sem o objeto/escopo window, pois já está rodando diretamente no window
+
+Também não são estruturas, como as condicionais (if e else) e de repetição (for, foreach, while, do while, etc); eles são objetos de fato, funcionando da mesma maneira que os objetos declarados no corpo do código, a única diferença é que estes são especiais, servindo para coisas muito específicas, tendo cada objeto global uma função definida.
+
+Exemplos:		//Não são todos, mas são os principais
+
+Object
+
+Array
+
+String
+
+Number
+
+Date - Serve para operar com dados de datas e horas			Date() - retorna a data atual, dia, hora, dia da semana e fuso
+
+Math - Se destina a trabalhar com valores, expressões e cálculos matemáticos	
+
+//Perceba que todos eles se iniciam com letra maiúscula, isso é da própria linguagem JavaScript, é só um padrão de nomenclatura, para diferenciá-los.
+
+É possível utilizar os objetos globais para se criar valores.
+Veja que se criarmos uma variável e atribuirmos a ela o objeto global Object, podemos transformar esse Object em uma função e executá-lo. Se exibirmos então o valor dessa variável, será retornado um objeto vazio.
+
+let pessoa - Object()
+Console.log(pessoa)
+>>>>>>>>>>>>>>
+{ }
+
+De igual forma podemos criar um array e já fornecer valores a ele:
+
+let lista  = Array('A', 'B', 'C')
+>>>>>>>>>>>>>>>>>>>>>>
+['A', 'B', 'C']
+
+Os valores criados terão o tipo de dado do objeto glogal utilizado em sua criação.
+
+let texto = String(42)
+>>>>>>>>>>>>>>>
+'42'		//perceba que o número 42 foi convertido para string. Mas e se passarmos um objeto para string?
+
+let texto = String({ })	//usamos o String para transformar um objeto em string
+>>>>>>>>>>>>>>>>
+'[object Object]'		//O JS não consegue converter diretamente um objeto para texto, retornando o texto específico mostrado aqui.
+
+Como são objetos, ao instanciarmos o nome do objeto global seguido de um ".", veremos surgir várias propriedades e métodos que podem ser utilizadas com aquele objeto global.
+Number.isInteger() - verifica se um dado número é inteiro, retornando um valor booleano //ele entende que 4.00 é inteiro.
+
+
+Usando JavaScript, crie um programa que monta uma escala de serviço para uma empresa com 12 funcionários. A Escala deverá contemplar três turnos de serviço por dia (manhã, tarde, noite) por trinta dias. Cada turno deverá receber apenas um funcionário. Um funcionário não poderá ser escalado mais de uma vez por dia. O funcionário que trabalhar no turno da noite não poderá ser escalado no dia seguinte. Os funcionários só poderão trabalhar até três vezes em cada turno. Cada funcionário só poderá trabalhar até 7 dias no mês
+
+
+
+MÓDULO 2 DE JAVASCRIPT
+
+D.O.M. - DOCUMENT OBJECT MODEL
+
+
+EVENTOS NO HTML
+
+Eventos são uma forma dinâmica de executar JavaScript no HTML. Permitem executar o javascript sem travar o carregamento da página como vinhamos utilizando anteriormente. São adicionados por ações específicas na página (clicar, passar o mouse, focar, digitar, etc). Exemplos de eventos:
+onMouseEnter - Sempre que o mouse passar por cima ele salva o valor
+onChange - Sempre que o valor  for alterado ele salva
+onFocus - Salva quando um input é selecionado
+onBlur - Salva quando saímos de um campo de input
+onclick - Salva quando clicamos no input, geralmente um botão
+
+De modo a evitar o uso de código JS escrito diretamente na página, recomenda-se criar funções em um arquivo javascript e apenas referenciar tais funções nos eventos do html.
+html:				JavaScript:
+<button onclick='onclick( )'>		function onclick(){
+    Clique aqui!			    console.log('Clicou no botão')
+</button>			}
+
+
+O QUE É D.O.M.?
+É uma sigla em inglês que significa Document Object Model, ou Modelo de Obejto do Documento. Nada mais é do que um modelo da página HTML, a página html geralmente é refenciada no javascript como um documento, e o DOM é a transformação desse documento inteiro para um objeto do javascript. o DOM permite que um documento escrito em linguagem de marcação (html, xml, etc) seja acessado pelo javascript. Isso é feito através de uma árvore de objetos: Uma tag possui outras tags dentro de si.
+O DOM permite que tenhamos acesso direto à página html para manipulá-la: lendo os elementos, criando novos elementos, excluir elementos, modificar elementos, modificar estilos, etc.
+No navegador, podemos acessar o DOM através do objeto Document
+
+OBTENDO ELEMENTOS HTML DO DOM
+Há vários métodos de se obter elementos específicos do documento html, qual utilizar irá depender do que se deseja fazer, vejamos alguns:
+
+Obter vários elementos em uma HTMLCollection
+	document.getElementsByTagName()
+	document.getElementsByClassName()
+
+Obter vários elementos em uma NodeList
+	document.getElementsByName()
+	document.querySelectorAll()
+
+Obtendo um único elemento
+	document.getElementById()
+	document.querySelector()
+
+Para mostrar o funcionamento de cada médoto, vamos utilizar o seguinte corpo de documento html:
+	HTML
+<body>
+  <h1>Obtendo Elementos HTML do DOM</h1>
+
+  <h2>Contatos</h2>
+  
+  <ul id="contact-list">
+    <li>
+      <label for="contact1">Contato 1</label>
+      <input type="text" id="contact1" name="contact1" class="contact-input">
+    </li>
+    <li>
+      <label for="contact2">Contato 2</label>
+      <input type="text" id="contact2" name="contact2" class="contact-input">
+    </li>
+    <li>
+      <label for="contact3">Contato 3</label>
+      <input type="text" id="contact3" name="contact3" class="contact-input">
+    </li>
+    <button onclick="show()">
+      Exibir
+    </button>
+  </ul>
+</body>
+
+	JAVASCRIPT
+function show() {
+  // Obter um elemento único a partir do seu id
+  const contactList = document.getElementById("contact-list")
+  console.log(contactList)
+
+>>>>>>>>>>>>>>>
+Exibe tudo que está dentro da tag <ul>, pois esta recebeu o id='contact-list'
+
+const listElements = document.getElementsByTagName('li')
+  console.log(listElements)
+>>>>>>>>>>>>>>>
+retorna um objeto do tipo HTMLCollection, possuindo na posição 0 a primeira li, na posição 1 a segunda li, na posição 2 a terceira li, e ainda temos acesso à propriedade Length com o tamanho dessa coleção de elementos html.
+
+// Obter vários elementos (HTMLCollection) a partir de uma classe. 
+  const contactInputs = document.getElementsByClassName("contact-input")
+  console.log(contactInputs)
+>>>>>>>>>>>>>>>
+retorna um objeto do tipo HTMLCollection, que possui um índice em formato numérico, como se fosse uma lista; e também as propriedades cuja chave é o nome do elemento.
+
+ // Podemos ser ainda mais específicos quando desejamso selecionar nossos elementos. Obter vários elementos (NodeList) a partir de uma query (semelhante aos seletores do CSS)
+  const contacts = document.querySelectorAll("#contact-list> li > label")
+  console.log(contacts)
+>>>>>>>>>>>>>>>>
+fornece todos os elementos label, que estejam dentro de um elemento <li> que estejam dentro de um elemento que possua id='contact-list'.
+retorna uma NodeList, que é um pouco mais parecida com um Array, é uma lista com três elementos (0, 1 e 2); também fornece o atributo length dessa lista
+A NodeList tem a vantagem de se poder utilizar métodos específicos para manipulá-la. Ex: nomeDaNodeList.forEach, .keys, .entries, etc
+
+
+// Obter vários elementos (NodeList) a partir do atributo name
+  const contact1 = document.getElementsByName("contact1")
+  console.log(contact1)
+>>>>>>>>>>>>>>>>
+retorna uma NodeList com os elementos que possuem o atributo id='contact1', nesse caso há apenas um.
+
+//Obter um único elemento a partir das querys
+   const primeiroElemento = document.querySelector('#contact-list > li > label')
+   console.log(primeiroElemento)
+>>>>>>>>>>>>>>>>
+<label for = 'contact1'>Contato 1</label>
+retorna apenas um elemento, e não mais uma NodeList. Possui a mesma sintaxe do querySelectorAll e inclusive funciona da mesma forma, porém ele irá obter o primeiro elemento e parar imediatamente. Mesmo que haja outras labels, ele irá retornar apenas a primeira que encontrar.	
+
+
+CRIANDO NOVOS ELEMENTOS NO DOM
+O DOM nos permite adicionar dinamicamente novos elementos HTML ao documento, para isso, precisamos: 
+1. Criar o elemento
+    document.createElement()
+2. Adicionar conteúdo ao elemento
+    newElement.innerHTML = 'Olá, mundo!'
+3. Adicionar o elemento como um novo nó no DOM
+    element.appendChild(newElement)
+
+Também é possível clonar algum elemento existente do DOM
+
+	HTML
+<body>
+    //botão que aciona a função de criar inputs
+    <button onclick="addInput()">Adicionar Input</button>
+
+    //elemento que irá receber as inputs criadas
+    <ul id="inputs"></ul>
+</body>
+
+	JAVASCRIPT
+//Função que irá criar o elemento
+function addInput() {
+  const ul = document.getElementById("inputs");
+
+  const newLi = document.createElement("li"); //li é a tag que será criada
+  //é possível referenciar os atributos do elemento criado
+  newLi.className = "list-name";
+  newLi.innerText = "Novo input: ";
+
+  //criando um novo input dentro do elemento criado
+  const newInput = document.createElement("input");
+  //setando atributos para a nova input criada
+  newInput.type = "text";
+  newInput.name = "input";
+  newInput.placeholder = "placeholder";
+
+  newLi.appendChild(newInput); //adiciona o newInput ao item li
+  ul.appendChild(newLi); //adiciona o item li à lista ul
+}
+
+MANIPULAÇÃO COM DOM
+	HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praticando a Manipulação do DOM</title>
+  <script src="./index.js"></script>
+</head>
+<body>
+  <h1>Praticando a Manipulação do DOM</h1>
+  <hr>
+
+  <h2>Minha Agenda</h2>
+  <!-- Botão para adionar elemento -->
+  <button onclick="addContact()">Novo Contato</button>
+  <!-- Botão para remover elemento -->
+  <button onclick="removeContact()">Remover Contato</button>
+
+  <!-- Seção para armazenar os contatos -->
+  <section id="contacts-list"></section>
+</body>
+</html>
+
+	JAVASCRIPT
+//função para adicionar contato
+function addContact() {
+  //criar uma variável para ser o destino do elemento criado
+  const contactSection = document.getElementById("contacts-list");
+
+  //criar um título para o contato criado
+  const h3 = document.createElement("h3");
+  //inserir texto na tag h3
+  h3.innerText("Contato");
+  //criar uma lista ul para adicionar campos para o elemento "contato"
+  const ul = document.createElement("ul");
+  //li para armazenar o nome do contato
+  const nameLi = document.createElement("li");
+  //texto para identificar o li dos nomes
+  nameLi.innerText = "Nome: ";
+  //criar o campo para inserir o input do nome do contato
+  const nameInput = document.createElement("input");
+  nameInput.type = "text";
+  nameInput.name = "fullname";
+  nameInput.placeholder = "nome";
+  //adicionar o input ao item da lista e adicionar o item à lista
+  nameLi.appendChild(nameInput);
+  ul.appendChild(nameLi);
+  ul.appendChild(document.createElement('br'))
+
+  //Fazer o mesmo para telefone do contato
+  const phoneLi = document.createElement("li");
+  phoneLi.innerText = "Telefone: ";
+  const phoneInput = document.createElement("input");
+  phoneInput.type = "text";
+  phoneInput.name = "fullname";
+  phoneInput.placeholder = "(00) 123-456-789";
+  phoneLi.appendChild(phoneInput);
+  ul.appendChild(phoneLi);
+  ul.appendChild(document.createElement('br'))
+
+  //criar campo para inserir o endereço
+  const adressLi = document.createElement("li");
+  addresLi.innerHTML = '<label for="address">Endereço: </label>';
+  const adressInput = document.createElement("input");
+  adressInput.type = "text";
+  adressInput.name = "adress";
+  adressInput.id = "adress";
+  adressInput.placeholder = "endereço";
+  adressLi.appendChild(adressInput);
+  ul.appendChild(adressLi);
+  ul.appendChild(document.createElement('br'))
+
+  contactSection.append(h3, ul);
+
+  //método .append permite adicionar vários elementos de uma vez só, ao contrário do appendChild
+}
+
+//função para remover contato
+function removeContact(){
+  //fazer uma função mais simples que remove o último contato da lista
+  
+    const contactSection = document.getElementById('contacts-list')
+    //excluir os elementos dentro da lista
+    const titles = document.getElementsByTagName('h3')
+    const contacts = document.getElementsByTagName('ul')
+    //método removeChild remove um título
+    contactSection.removeChild(titles[titles.length - 1])
+    contactSection.removeChild(contacts[contacts.length - 1])
+}
+
+
+EXERCÍCIO DE ESCALAÇÃO DE TIME
+	DESCRIÇÃO
+### Escalação do Time
+
+Construa uma página web que permita montar a escalação de um time de jogadores. Nele deverá ser possível:
+
+- Escalar um jogador
+    - Informar a posição do jogador a ser escalado para o time.
+    - Informar o nome do jogador.
+    - Informar o número da camisa do jogador.
+    - Ter um botão “Escalar” que pergunta ao usuário se ele deseja confirmar a escalação daquele jogador e então insere as informações em uma lista na página.
+    - Após o jogador ser escalado os campos de texto devem ser limpos.
+- Remover um jogador
+    - Informar o número da camisa do jogador.
+    - Ter um botão “Remover” que pergunta ao usuário se ele deseja confirmar a remoção daquele jogador e então exclui ele da lista na página.
+    - Após o jogador ser removido o campo de texto deve ser limpo.
+
+Dica: lembrando que é possível acessar o texto de um input através da propriedade value.	
+
+	HTML
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escalação do Time</title>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <h1>Escalação do Time</h1>
+    <h2>Escalar Jogador</h2>
+    <p>
+      <label for="position">Posição:</label>
+      <input type="text" id="position" />
+      <label for="name">Nome:</label>
+      <input type="text" id="name" />
+      <label for="number">Número:</label>
+      <input type="number" id="number" />
+      <button onclick="addPlayer()">Escalar</button>
+    </p>
+    <h2>Remover Jogador</h2>
+    <p>
+      <label for="numberToRemove">Número:</label>
+      <input type="number" id="numberToRemove" />
+      <button onclick="removePlayer()">Remover</button>
+    </p>
+    <h2>Time:</h2>
+    <ul id="team-list"></ul>
+  </body>
+</html>
+
+	JAVASCRIPT
+function addPlayer() {
+  const position = document.getElementById("position").value;
+  const name = document.getElementById("name").value;
+  const number = document.getElementById("number").value;
+
+  const confirmation = cfirm("Escalar " + name + " como " + position + "?");
+
+  if (confirmation) {
+    const teamList = document.getElementById("team-list");
+    const playerItem = document.createElement("li");
+    playerItem.id = "player-" + number;
+    playerItem.innerText = position + ": " + name + " (" + number + ")";
+    teamList.appendChild(playerItem);
+
+    document.getElementById("position").value = "";
+    document.getElementById("name").value = "";
+    document.getElementById("number").value = "";
+  }
+}
+function removePlayer() {
+  const number = document.getElementById("numberToRemove").value;
+  const playerToRemove = document.getElementById("player-" + number);
+
+  const confirmation = confirm(
+    "Remover o jogador " + playerToRemove.innerText + "?"
+  );
+
+  if (confirmation) {
+    document.getElementById("team-list").removeChild(playerToRemove);
+    document.getElementById("numberToRemove").value = "";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.

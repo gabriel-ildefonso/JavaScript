@@ -1,46 +1,46 @@
-Funções anônimas são funções que não tem nome. Uma de suas aplicações é o armazenamento de funções em variáveis.
+Anonymous functions are functions that have no name. One of its applications is the storage of functions in variables.
 
 
-No JavaScript, e em outras linguagens que suportam o paradigma funcional, as funções podem ser lidas como valores, ou mesmo armazenadas em variáveis.
+In JavaScript, and in other languages that support the functional paradigm, functions can be read as values, or even stored in variables.
 
-function soma (a, b){
-  return a + b
+function sum(a, b){
+   return a + b
 }
 
-const operação = soma   //Repare que não há parênteses em soma.
+const operation = sum //Note that there are no parentheses in sum.
 
-Se fosse const operação = soma(), a variável 'operação' receberia o valor do resultado da função 'soma'. Sem os parênteses, a variável 'operação' é igual a própria função 'soma'.
+If it were const operation = sum(), the variable 'operation' would receive the value of the result of the function 'sum'. Without the parentheses, the 'operation' variable is the same as the 'sum' function itself.
 
-function soma (a, b){
-  return a + b
+function sum(a, b){
+   return a + b
 }
 
-let operação = soma
-console.log(operação(4, 5))
+let operation = sum
+console.log(operation(4, 5))
 
-operação = function (a, b){
-  return a - b
+operation = function (a, b){
+   return a - b
 }
-console.log(operação(4, 5))
+console.log(operation(4, 5))
 
 >>>
 9
 -1
-Assim criamos uma função diretamente dentro de uma variável, alterando o comportamento de uma função, de modo que não foi necessário dar um nome para a função.
+So we created a function directly inside a variable, changing the behavior of a function, so that it was not necessary to name the function.
 
-Assim como acontece com o 'var', funções criadas com o 'function' são carregadas no início do arquivo. O mesmo não acontece com as funções anônimas, sendo que só podem ser acessadas após terem sido declaradas.
+As with 'var', functions created with 'function' are loaded at the beginning of the file. The same does not happen with anonymous functions, since they can only be accessed after they have been declared.
 
 helloWorld()
 hiWorld()
 
 function helloWorld(){
-  console.log('Hello world')
+   console.log('Hello world')
 }
 
 const hiWorld = funtion(){
-  console.log('Hi world')
+   console.log('Hi world')
 }
 
 >>>>
-Hello world
-ReferenceError: Cannot acess 'hiWorld' before initialization
+hello world
+ReferenceError: Cannot access 'hiWorld' before initialization
