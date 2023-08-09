@@ -1179,7 +1179,7 @@ html:				JavaScript:
 
 
 O QUE É D.O.M.?
-É uma sigla em inglês que significa Document Object Model, ou Modelo de Obejto do Documento. Nada mais é do que um modelo da página HTML, a página html geralmente é refenciada no javascript como um documento, e o DOM é a transformação desse documento inteiro para um objeto do javascript. o DOM permite que um documento escrito em linguagem de marcação (html, xml, etc) seja acessado pelo javascript. Isso é feito através de uma árvore de objetos: Uma tag possui outras tags dentro de si.
+É uma sigla em inglês que significa Document Object Model, ou Modelo de Objeto do Documento. Nada mais é do que um modelo da página HTML, a página html geralmente é refenciada no javascript como um documento, e o DOM é a transformação desse documento inteiro para um objeto do javascript. o DOM permite que um documento escrito em linguagem de marcação (html, xml, etc) seja acessado pelo javascript. Isso é feito através de uma árvore de objetos: Uma tag possui outras tags dentro de si.
 O DOM permite que tenhamos acesso direto à página html para manipulá-la: lendo os elementos, criando novos elementos, excluir elementos, modificar elementos, modificar estilos, etc.
 No navegador, podemos acessar o DOM através do objeto Document
 
@@ -1229,6 +1229,7 @@ function show() {
   // Obter um elemento único a partir do seu id
   const contactList = document.getElementById("contact-list")
   console.log(contactList)
+}
 
 >>>>>>>>>>>>>>>
 Exibe tudo que está dentro da tag <ul>, pois esta recebeu o id='contact-list'
@@ -1491,7 +1492,7 @@ function removePlayer() {
 
 
 
-
+PROXIMA AULA JS III - DOM aula 7 - Praticando a Manipulação com DOM.
 
 
 

@@ -1,0 +1,51 @@
+D.O.M. is the acronym for Document Object Model, and it is a model of the html page. The html page is commonly referred to in JavaScript as the 'html document', and the DOM is a transformation of that entire document into a JavaScript object. As if we created a model of our page in the form of an object.
+
+The application of the DOM is to allow a document written in markup language (html, xml, yaml, etc.) to be accessed by JavaScript. This is done through the creation, by the DOM, of a tree of objects (tree data structure).
+
+Exemplo:
+html code:
+<html>
+  <body>
+    <h1>Some title</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing...</p>
+    <table>
+      <tr>
+        <td>text</td>
+        <td>text</td>
+        <td>text</td>
+      </tr>
+      <tr>
+        <td>text</td>
+        <td>text</td>
+        <td>text</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+D.O.M.:
+html
+  body
+    h1
+    p
+    table
+      tr
+        td
+        td
+        td
+      tr
+        td
+        td
+        td
+
+The DOM allows that, through JavaScript, it is possible to access these elements and manipulate them, such as:
+- read the elements;
+- create new elements;
+- delete elements;
+- modify elements;
+- modify styles;
+- etc.
+
+Through the browser, it is possible to access the DOM through the 'document' object. To access it, just follow these steps:
+1 - Open the browser console;
+2 - type 'document' and press 'enter'

@@ -1,0 +1,12 @@
+O D.O.M. nos permite adicionar dinamicamente novos elementos HTML ao documento. Para isso, precisamos:
+
+1 - Criar o elemento
+  document.createElement('tag_of_new_element')
+
+2 - Adicionar conteúdo ao elemento
+  newElement.innerHTML = 'Hello world!'
+
+3 - Adicionar o elemento como um novo nó no D.O.M.
+  element.appendChild(newElement)
+
+Também é possível clonar algum elemento existente do D.O.M.

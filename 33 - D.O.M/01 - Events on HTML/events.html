@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events HTML</title>
+</head>
+<body>
+  <div>
+    <label for="onMouseEnter">Mouse enter:</label>
+    <input type="text" id="onMouseEnter" onmouseenter="mouseEnterEvent()">
+  </div>
+  <br>
+  <div>
+    <label for="onChange">Value change:</label>
+    <input type="text" id="onChange" onchange="changeEvent()">
+  </div>
+  <br>
+  <div>
+    <label for="onFocus">Focus on:</label>
+    <input type="text" id="onFocus" onfocus="focusEvent()">
+  </div>
+  <br>
+  <div>
+    <label for="onBlur">Focus off:</label>
+    <input type="text" id="onBlur" onblur="blurEvent()">
+  </div>
+  <br>
+  <button onclick="clickEvent()">
+    Click Here!
+  </button>
+
+  <script src="./events.js"></script>
+</body>
+</html>

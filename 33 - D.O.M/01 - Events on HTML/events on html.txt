@@ -1,0 +1,14 @@
+D.O.M. - Document Object Model
+
+EVENTS ON HTML
+
+Events are a dynamic way to execute JavaScript on an html page. This allows running the javascript without blocking the page loading, so that the execution is more dynamic and fluid. These events are triggered by specific user actions on the page, such as: clicking, hovering, hovering, typing, etc.
+
+Examples of events:
+onMouseEnter - Whenever the mouse hovers over it saves the value;
+onChange - Whenever the value is changed, and the focus is changed, it saves;
+onFocus - Saves when input is selected;
+onBlur - Saves when we leave an input field;
+onclick - Saves when we click on the input, usually a button;
+
+In order to avoid using JS code written directly on the page, it is recommended to create functions in a javascript file and only reference such functions in the html events.

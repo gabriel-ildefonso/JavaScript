@@ -84,33 +84,3 @@ To use sort without modifying the original array, a viable solution is to use sl
 let charactersOrdered = characters.slice().sort(function(a, b){
    return a.level - b. level
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
