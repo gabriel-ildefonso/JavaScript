@@ -5,6 +5,9 @@ O D.O.M. nos permite adicionar dinamicamente novos elementos HTML ao documento. 
 
 2 - Adicionar conteúdo ao elemento
   newElement.innerHTML = 'Hello world!'
+  O innerHTML é perigoso, pode permitir a um usuário a inserir sciptos diretamente na página
+
+
 
 3 - Adicionar o elemento como um novo nó no D.O.M.
   element.appendChild(newElement)

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team</title>
+  <script src="./team.js"></script>
+</head>
+<body>
+  <h1>Team</h1>
+  <br>
+  <h2>Add Player</h2>
+  <p>
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name">
+    <label for="number">Number:</label>
+    <input type="text" name="number" id="number">
+    <label for="position">Position:</label>
+    <input type="text" name="position" id="position">
+    <button onclick="addPlayer()">ADD</button>
+  </p>
+
+  <h2>Remove Player</h2>
+  <p>
+    <label for="numberToRemove">Number</label>
+    <input type="numberToRemove" id="numberToRemove">
+    <button onclick="removePlayer()">REMOVE</button>
+  </p>
+
+  <h2>Team</h2>
+  <ul id="teamList"></ul>
+</body>
+</html>

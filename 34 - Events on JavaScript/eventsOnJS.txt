@@ -1,0 +1,1 @@
+Manter eventos no html, à medida que os projetos vãos e tornando mais complexos, pode dificultar a legibilidade e manutenção do código.
