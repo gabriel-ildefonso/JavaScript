@@ -1,0 +1,1 @@
+Quando se trabalha com formulários em html diretamente, sem o uso de uma action ditando a ação do submit do formulário, o html entende que os dados do formulário são para a própria página, por isso que os dados preenchidos aparecem na barra de endereço do navegador.
