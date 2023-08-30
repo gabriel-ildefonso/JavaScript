@@ -1,1 +1,9 @@
-Quando se trabalha com formulários em html diretamente, sem o uso de uma action ditando a ação do submit do formulário, o html entende que os dados do formulário são para a própria página, por isso que os dados preenchidos aparecem na barra de endereço do navegador.
+Quando se trabalha com formulários em html diretamente, sem o uso de uma action ditando a ação do submit do formulário, o html entende que os dados do formulário são para a própria página, por isso que os dados preenchidos aparecem na barra de endereço do navegador. O problema é que quando ocorre essa atualização perdemos os dados que estávamos trabalhando de forma dinâmica.
+
+O método preventDefault evita o recarregamento  automático da página quando executamos a action do formulário
+
+Para selecionar todas as checkboxes marcadas, o procedimento é um pouco diferente, pois não buscamos apenas uma entrada, pode ser uma marcada, mais de uma ou nenhuma.
+
+Criamos inicialmente uma string para armazenar os itens marcados, então usamos querySelectorAll para buscar todos os itens com o name = 'salad', porém passamos uma propriedade 'checked', assim, serão trazidos à string apenas os itens de name 'salad' que foram marcados.
+
+O querySelectorAll retorna uma nodeList, com isso podemos usar o método forEach para criar uma função que nos permitirá organizar o conteúdo
