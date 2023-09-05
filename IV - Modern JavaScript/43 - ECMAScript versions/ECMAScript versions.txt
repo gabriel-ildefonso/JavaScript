@@ -1,0 +1,17 @@
+ECMAScript é o "nome científico do JavaScript".
+
+O JavaScript é uma linguagem em constante atualização:
+  - ES1 em 1997
+  - ES2 em 1998
+  - ES3 em 1999
+  - ES4 nunca foi lançada
+  - ES5 em 2009
+
+Em 2015, o modelo de atualização do javascript mudou para anual, e suas versões passaram a ser identificadas pelo ano de lançamento.
+  - ES6 em 2015
+  - ES2016
+  - ES2017
+  - ES2018
+  - ...
+
+Cada nova versão trouxe novos recursos e conheceremos esses recursos nesse módulo.

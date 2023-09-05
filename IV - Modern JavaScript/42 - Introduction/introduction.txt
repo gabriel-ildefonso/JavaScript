@@ -3,6 +3,7 @@ O quê vamos aprender nesse módulo:
 - Situação do JavaScript moderno
 
 - Novos recursos do JavaScript
+  Template literals, desestruturação, módulos, etc.
 
 - Gerenciamento de pacotes com npm
 
