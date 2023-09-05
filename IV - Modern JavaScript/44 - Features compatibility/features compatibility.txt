@@ -1,0 +1,14 @@
+Os recursos do javascript precisam ser implementados pelo navegador e seus interpretadores para que funcionem.
+
+No entanto, os navegadores podem demorar a implementar os recursos das atualizações do javascript, ou mesmo jamais implementá-las.
+
+Isso cria o problema de nem sempre os recursos mais novos do javascript estarem disponíveis nos navegadores. Um exemplo disso é o Internet Explorer, da Microsoft.
+
+para saber mais sobre a compatibilidade de recursos temos duas fontes principais:
+
+  - Documentação na MDN (mozilla developer network): https://developer.mozilla.org/pt-BR/docs/WEb/JavaScript
+
+  - Can I Use: https://caniuse.com/
+
+
+Nesse módulo também aprenderemos a resolver esse problema de compatibilidade.

@@ -1,0 +1,16 @@
+TEMPLATE LITERALS
+
+Template literals nada mais é do que uma outra forma de se declarar strings.
+
+Utiliza o acento grave (crase)
+
+Permite a interpolação de strings (inserção de código dentro da string) e quebra de linha automática
+
+Exemplo:
+let string = `Essa linha será
+quebrada automaticamente
+ e essa quebrará e terá um espaço no começo
+
+Resultado de uma expressão: ${2+2}, após o cifrão, o código no interior das chaves será executado.
+
+Com isso não é mais necessário inserir o '\n' para quebra de linha, nem ficar concatenando strings com '+'
