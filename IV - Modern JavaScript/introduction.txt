@@ -1,0 +1,11 @@
+O quê vamos aprender nesse módulo:
+
+- Situação do JavaScript moderno
+
+- Novos recursos do JavaScript
+
+- Gerenciamento de pacotes com npm
+
+- Compilação de javascript com Babel
+
+- Empacotamento (bundling) 

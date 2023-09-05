@@ -1,0 +1,13 @@
+Normalmente, ao trocarmos de página, perdemos todas as informações dinâmicas que estávamos utilizando. Isso pode se tornar um problema ao trabalharmos com sites que se valem de várias páginas para sua solução.
+Atualmente, navegadores possuem recursos para armazenar informações, dentre esses recursos, os mais notáveis são:
+
+- Session storage: 
+  É uma forma simples de armazenar dados no navegador. Persistem mesmo após mudar de página em um mesmo site enquanto a aba/janela estiver aberta. Existem somente enquanto a aba daquele site está aberta, ao fechar, o sessionStorage é limpo. Um exemplo de aplicação do Session Storage são os dados de login, enquanto a aba/janela estiver aberta, o site guardará os dados do login entre as páginas do site. É exclusivo do front-end.
+
+- Local storage:
+  Desenvolvido para cumprir com as deficiências do Session Storage. Os dados armazenados persistem mesmo após fechar a aba/janela do navegador. Existem "para sempre", até serem removidos, não possuem data de expiração. Um caso de uso são sites que permitem que a sessão do usuário permaneça ativa mesmo após a saída do usuário do site, como um "continuar conectado" do gmail. É exclusivo do front-end.
+
+- Cookies:
+  São dados armazenados em pequenos arquivos de texto no computador do cliente. Podem possuir data de expiração. São a forma mais tradicional de permitir "lembrar" de informações mesmo depois de fechado o navegador. São enviados nas requisições e podem existir no servidor, sendo devolvidos quando uma página html for solicitada, podendo existir no backend. É um recurso que existe há mais tempo.
+
+Para verificar os dados armazenados, vá em inspecionar a página, e então na guia "aplicação"
