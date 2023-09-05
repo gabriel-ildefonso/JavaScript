@@ -1,0 +1,19 @@
+ARROW FUNCTION
+
+Arrow function é uma forma diferente de escrever uma função anônima.
+
+Esse método não utiliza a palavra reservada 'function', utiliza apenas '=>' após os parâmetros (por iss arrow).
+
+Não possui seus próprios 'this' para referenciar o próprio objeto; 'arguments' , 'super'e 'new.target'.
+
+Também permite retornar diretamente uma expressão, caso seja uma função de uma única linha.
+
+Exemplo:
+const sum = (a, b) => {
+  return a + b
+}
+
+No caso de uma função de uma única linha:
+
+const multiply = (a,b) => a * b
+variável = parâmetros => procedimento
