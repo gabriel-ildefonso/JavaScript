@@ -1,0 +1,15 @@
+Desestruturação de objetos e arrays é uma funcionalidade que permite criar propriedades de um objeto ou elemento de um array.
+
+No caso das propriedades de objeto, as variáveis serão criadas com o mesmo nome da propriedade.
+
+No caso de elementos de array, podemos atribuir qualquer nome para a variável.
+
+Também pode ser utilizada de outras formas, como nos parâmetros de uma função
+
+Exemplo:
+const {name, email} = person
+const [x, y] = coordinates
+
+function hello({name}){
+  console.log(`Hello ${name}`)
+}
