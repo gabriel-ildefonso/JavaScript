@@ -1,0 +1,18 @@
+É um operador que permite espalhar os elementos de um objeto iterável, como um array ou uma string.
+
+Utiliza três pontos: ...iterableObject
+
+let str = 'Hello world'
+let arr = [4, 2, 8, 3, 1]
+
+console.log(...str)
+//Separa as letras H e l l o   w o r l d
+
+console.log(...arr)
+//separa os elementos  4 2 8 3 1
+
+Pode ser utilizado para diferentes fins, como por exemplo:
+- Passar vários parâmetros de uma única vez;
+- Clonar objetos iteráveis;
+- Fazer manipulações sem afetar o objeto original;
+- Transformar strings em arrays
