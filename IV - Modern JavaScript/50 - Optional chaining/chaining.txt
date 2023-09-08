@@ -1,0 +1,7 @@
+O  operador de encadeamento opcional permite ler propriedades internas de uma cadeia de objetos sem que a validação de cada referência da cadeia seja realizada.
+
+Em outras palavras, permite acessar propriedades internas sem lançar erros quando uma propriedade é nullish (null ou undefined).
+
+Funciona de forma similar ao encadeamento normal (operador '.'), porém é descrito como '?.'
+
+É chamado de encademento opcional por ele fazer o encadeamento se a propriedade existir.
