@@ -1,0 +1,11 @@
+Rest é uma técnica que permite a uma função receber qualquer número de parâmetros.
+
+Também permite manipular esses parâmetros como um array na definição da função (o que diferencia do objeto arguments)
+
+Exemplo:
+function sum(...numbers){
+  return numbers.reduce((accum, num) => accum + num, 0)
+  //usando o spread no parâmetro da função, o JS entende que numebers será um array de parâmetros, permitindo assim a utilização de métodos típicos de manipulação de arrays, tal como o reduce.
+}
+
+É importante lembrar que o parâmetro rest deve ser o último em uma lita de parâmetros. Se o método se destina a utilizar uma quantidade ainda indefinida de parâmetros, não há como o programa saber quando ele deve finalizar a espera por novos parâmetros. Rest são, de certa forma, o 'resto dos parâmetros'
