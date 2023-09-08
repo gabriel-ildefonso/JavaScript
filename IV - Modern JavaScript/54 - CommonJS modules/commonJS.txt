@@ -1,0 +1,8 @@
+Para compartilhar módulos com outros arquivos, utilizamos o  método específico do CommonJS module.exports = nome_do_módulo_a_ser_exportado.
+
+Ao exportar o módulo, permitimos que ele possa ser importado em outro local
+
+Para importar o módulo, usamos o método do CommonJS 'require'
+const variável = require('caminho_do_arquivo_a_ser_importado)
+
+Por padrão, o CommonJS não é suportado por navegadores, porém, no Node.js, ele é a forma padrão de se trabalhar com módulos
