@@ -1,0 +1,22 @@
+Já vimos que é possível incluir código javascript diretamente na página html. Utilizando a tag 'script', todo o conteúdo do arquivo é incluído na página simultaneamente. Se for necessário incluir vários arquivos .js, um código javascript muito grande, será necessário uma tag script para cada arquivo .js.
+
+À medida que o sites evoluíram e as aplicações web começaram a surgir, o javascript foi sendo cada vez mais utilizado.
+
+Além disso, o uso do javascript fora dos navegadores também passou a ser não apenas possível, como muito popular (como o Node.js, tecnologia que permite interpretar código javascript fora do navegador, foi criado em 2009).
+
+Isso tudo contribuiu para o amadurecimento do javascript e a implementação de uma funcionalidade já existente em outras linguagens: módulos.
+
+O QUÊ SÃO MÓDULOS?
+São como capítulos de livro, seções de supermercado
+Autores organizam suas histórias em capítulos; supermercados organizam seus produtos em seções; e bons programadores organizam o código em módulos.
+
+Módulos são agrupamentos de códgos com funcionalidades distintas que podem ser compartilhados, adicionados ou removidos de nossos softwares. São blocos que fazem uma função específica.
+
+POR QUE UTILIZAR MÓDULOS?
+Manutenibilidade - facilidade em manutenir o código;
+Namespacing - agrupamento de nomes isolados em módulos, assim não há conflitos de nomes, prevenindo erros. Dois módulos poderão ter variáveis com o mesmo nome.
+Reusabilidade - Com módulos é possível criar blocos de códigos com funções específicas que podem ser reutilizados em outras aplicações. dry (don't repeat yourself)
+
+MÓDULOS NO JAVASCRIPT 
+- CommonJS: Forma tradicional, de quando não se possuía nativamente os módulos no javascript.
+- ES Modules: atual, uma implementação nativa da linguagem para se trabalhar com módulos.
