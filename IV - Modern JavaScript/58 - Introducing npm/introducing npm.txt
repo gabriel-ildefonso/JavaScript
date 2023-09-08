@@ -1,0 +1,19 @@
+npm, ou Node Package Manager, é um gerenciador de pacotes do Node.js. O recurso de gerenciador de pacotes se tornou tão popular que cada linguagem de programação possui o seu.
+
+//o npm não é o único gerenciador de pacotes do javascript, o yarn também executa essa mesma tarefa.
+
+Obs: Node.js é a ferramenta que permite executar o javascript fora do navegador.
+
+PORQUE O NPM EXISTE?
+Os módulos são muito úteis para organizar nossas aplicações, mas essa não é sua única vantagem.
+
+Com o npm, programadores podem compartilhar seus módulos com outros desenvolvedores.
+
+O npm é um conjunto de ferramentas que permite compartilhar os módulos na internet, baixar módulos para nosso próprio projeto e gerenciar os módulos intalados no nosso projeto.
+
+Isso tudo aliado ao poder da comunidade open-source permite aumentar a nossa produtividade (princípio DRY, Dont't repeat yourself)
+
+O npm também pode ser visto como três recursos que trabalham juntos:
+  1 - Uma ferramenta de linha de comando para executar o npm
+  2 - Um repositório online de pacotes, onde ficam hospedados os módulos que podemos baixar
+  3 - O site https://npmjs.com onde podemos navegar pelos módulos existentes no repositório.
