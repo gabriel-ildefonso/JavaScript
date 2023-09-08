@@ -1,0 +1,32 @@
+JSON, ou JavaScript Object Notation, é um formato de arquivo utilizado para troca de dados.
+
+É um formato compacto, representado em text, de padrão aberto e que trabalha utilizando o sistema de chave:valor.
+
+Como o proóprio nome diz, ele utiliza a mesma notação, ou seja, forma de se escrever o conteúdo, dos objetos do javascript (com alguns mínimos detalhes diferentes):
+
+  - "" para nomear as chaves;
+  - Tipos primitivos suportados para valores (string, number, boolean e null)
+  - {} para definir grupos de propriedades (objetos)
+  - [] para definir listas de dados (arrays)
+  - , para separar as propriedades
+
+
+É muito utilizado para troca de dados entre diferentes sistemas e em arquivos de configuração no javascript.
+
+É amplamente utilizado na web e é suportado por várias linguagens além do javascript.
+
+Exemplos:
+  {
+    'name': 'Gabriel Silveira',
+    'job': 'Fullstack Developer',
+    'technologies': ['html', 'css', 'javascript', 'sql'],
+    'working': true,
+    'yearsOfExperience': 2,
+    'website': null
+  }
+
+  Manipulando arquivos JSON no javascript:
+
+  JSON.parse() //converte uma string para um  objeto json-compatible
+
+  JSON.stringfy() //converte um objeto json-compatible para string
