@@ -1,0 +1,9 @@
+Para se utilizar módulos pelo ES Modules,  deve-se empregar a palavra reservada 'export' antes da declaraão da função ou da variável a ser exportada.
+
+export function ...
+
+Para se importar os módulos, basta utilizar as palavras reservadas 'import' e 'from'
+
+import {nome_da_função} from {'caminho'}
+
+Ainda é necessário declarar no html que se deseja trabalhar com modules, já que não são um comportamento padrão do navegador. Por isso, na tag script, junto com o caminho do arquivo js a ser executado, deve contar o atributo 'type="module"'
