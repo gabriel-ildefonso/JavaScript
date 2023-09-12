@@ -1,0 +1,37 @@
+WEBPACK
+
+"WEBPACK É UM EMPACOTADOR DE MÓDULO ESTÁTICO"
+
+Seu objetivo é empacotar todos os módulos de uma aplicação a partir de um ou mais pontos de entrada em um ou mais bundles, que são arquivos estáticos contendo tudo que a aplicação precisa para funcionar.
+
+O webpack contrói um grafo de dependências para os pontos de entrada, o que permite saber exatamente quais módulos são necessários. O webpack pega todo o conteúdo da aplicação, indo inclusive além do javascript, junta tudo num pacotão, num arquivo estático, ou seja, um arquivo que não precisar ser executado.
+//Organiza em pastas o ninho de guacho que são seus códigos
+
+Num projeto real, usamos várias dependências que seriam necessárias para a distribuição da nossa aplicação.
+
+https://webpack.js.org/
+
+PEÇAS CHAVE DO WEBPACK
+
+1 - Entry
+Pontos de entrada de onde o webpack procurará por arquivos para empacotar, o arquivo inicial a ser analizado pelo webpack
+
+2 - Output
+A saída resultante do processo de empacotamento dos módulos
+
+3 - Loaders
+Por padrão, o webpack entende apenas javascript e JSON.
+
+Loaders permitem que o webpack consiga entender outros tipos de arquivos (como .css, por exemplo), transformando-os em módulos válidos e incluindo-os no grafo de dependências. Loaders sempre irão realizar algum tipo de transformação no código javascript como, por exemplo, utilizar o babel junto com o webpack
+
+4 - Plugins
+São extensões para ampliar o comportamento do webpack, realizando tarefas mais elaboradas que os loaders (que apenas transformam módulos)
+
+POR QUE UTILIZAR O WEBPACK?
+Possibilidade de trabalhar com módulos de forma fácil, inclusive módulos CommonJS
+
+Possibilidade de automatizar o gerenciamento dos módulos e dependências da aplicação
+
+Empacotar os módulos em arquivos estáticos permite que eles sejam servidos na web de forma mais fácil e rápida
+
+Webpack é uma das soluções mais utilizadas do mercado para gerenciamento de assets estáticos, sendo utilizado por grandes empresas e frameworks populares como Next.js, Vue.js, etc.
