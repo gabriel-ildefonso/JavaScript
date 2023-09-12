@@ -1,0 +1,24 @@
+O QUE IREMOS APRENDER
+
+O que é programação orientada a objetos?
+  É um paradigma de programação
+
+Fundamentos da programação
+
+  Associação
+
+  Encapsulamento
+
+  Herança
+
+  Polimorfismo
+
+
+Como usar POO no javascript
+  Classes e instâncias
+
+  Construtores
+
+  Acessadores
+
+  Etc
