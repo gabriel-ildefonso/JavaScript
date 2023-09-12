@@ -1,0 +1,14 @@
+'Babel é um compilador JavaScript'
+
+Como já vimos anteriormente, um compilador é uma ferramenta que permite converter o código escrito em uma linguage para outra linguagem.
+
+O Babel é um conjunto de ferramentas que serve principalmente para converter código nas versões mais recentes do javascript para código de versões mais antigas, a fim de torná-lo compatível com plataformas que não suportam as versões mais novas.
+
+Alguns recursos do Babel:
+
+1 - Transformação de sintaxe;
+2 - Polyfill de recursos não existentes no ambiente alvo; //acrescentar recursos novos em versões antigas, criando mecanismos que substitui os métodos novos.
+3 - Transformação de código; //otimização de código
+4 - Muito mais...
+
+Mais informações sobre o Babel estão disponíveis em https://babeljs.io/
