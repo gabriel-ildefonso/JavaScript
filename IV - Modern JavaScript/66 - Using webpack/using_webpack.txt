@@ -1,10 +1,8 @@
 # Usando o Webpack
 
 1. Para começar vamos inicializar um novo projeto npm:
-    
-    ```jsx
+
     npm init -y
-    ```
     
 2. Dentro desse novo projeto vamos criar uma pasta “dist” e dentro dela uma página “index.html” simples apenas para testarmos a saída do webpack:
     
