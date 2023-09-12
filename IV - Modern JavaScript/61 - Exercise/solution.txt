@@ -1,0 +1,17 @@
+1. Para iniciar, acesse o site do npm em https://www.npmjs.com/
+
+2. Pesquise por “dayjs” e acesse a página do pacote (https://www.npmjs.com/package/dayjs)
+
+3. Leia o conteúdo da página e da documentação do dayjs (https://day.js.org/docs/en/installation/installation)
+
+4. Crie uma pasta para a resolução do exercício em seu computador e acesse-a com o terminal ou com o VS Code.
+
+5. Dentro do terminal, inicialize um projeto npm:
+  npm init -y
+  //a flag -y adiciona valores padrão para todos os campos do projeto
+
+6. Instale o jayjs:
+  npm install --save dayjs
+  //não é necessário usar a flag '--save', e também pode-se abreviar o 'install' como 'i', ficando apenas 'npm i dayjs'
+
+7. Crie o arquvio birthday.js e adicione o código da função conforme pedido no exercício
