@@ -1,0 +1,73 @@
+o webpack-dev-server é um pacote para ser utilizado em conjunto com o webpack, que permite criar um servidor de desenvolvimento para podermos rodar nossas aplicações enquanto trabalhamos nelas. Funciona como o LiveServer do Visual Studio Code
+
+# Utilizando o webpack-dev-server
+
+1. Para essa aula iremos utilizar o projeto do último exercício, assim já teremos a estrutura principal pronta. Você pode seguir os passos na mesma pasta do exercício ou criar uma nova pasta e copiar o conteúdo para ela.
+
+2. Com tudo pronto, a primeira coisa a fazer para utilizar o webpack-dev-server é instalar o pacote através do comando:
+  
+  npm i -D webpack-dev-server
+    
+3. O webpack-dev-server se integra diretamente ao webpack, então tudo que precisamos fazer para configurá-lo é editar as opções do mesmo arquivo “webpack.config.js” que já tínhamos:
+
+  A primeira coisa que é necessário configurar é o caminho onde estão os arquivos, por padrão, o webpack-dev-server utiliza a pasta 'public', em nosso caso, estamos usando a pasta dist
+
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'dist')
+      //esse comando determina o comanho do arquivo a ser carregado pelo webpack
+    },
+  }
+  Ainda dentro do devServer:
+    compress: true //comprime todo o arquivo e serve tudo ao navegador
+    port: 8000  //Sinaliza ao webpack qual a porta em que ele deve carregar a aplicação
+
+  // webpack.config.js
+  
+  const path = require('path')
+  
+  module.exports = {
+    devServer: {
+      static: {
+        directory: path.resolve(__dirname, 'dist')
+      },
+      compress: true,
+      port: 8000
+    },
+    entry: {
+      index: './src/index.js'
+    },
+    mode: 'production',
+    module: {
+      rules: [{
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }, {
+        test: /.js$/,
+        use: ['babel-loader']
+      }]
+    },
+    output: {
+      filename: '[name].min.js'
+    }
+  }
+    
+4. Com tudo configurado, já podemos executar o webpack-dev-server. Mas, por uma questão de conveniência, podemos criar um script para ele no arquivo “package.json”:
+    
+  // package.json
+  
+  // ...
+    "scripts": {
+      "build": "webpack",
+      "dev": "webpack-dev-server"
+    },
+  // ...
+    
+5. E então executar o script:
+    
+  Obs.: Repare que agora temos todos os benefícios do webpack unidos ao webpack-dev-server, o que garante:
+  
+  - Reempacotamento automático sempre que uma alteração for salva
+  - Projeto sendo servido na porta configurada (sem precisar da extensão Live Server)
+  - Página do navegador recarregada sempre uma alteração for salva
+  - E outras opções que podem ser conferidas na documentação
