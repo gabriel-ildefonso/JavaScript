@@ -1,0 +1,68 @@
+O npx é um comando usado para executar as bibliotecas que forem instaladas pela linha de comando. 
+
+Nem todos os pacotes são executáveis, para saber quais pacotes são executáveis via terminal e quais comandos podem ser utilizados, basta procurar na documentação de cada pacote utilizado.
+
+Quando um pacote puder ser executado, dentro da pasta 'node_modules', haverá a pasta '.bin', dentro dela haverá um atalho (link simbólico) para o arquivo executável, ao clicar sobre o atalho, abrirá no VSCode a rotina de execução do arquivo
+
+
+
+1. Comece inicializando um novo projeto npm em um pasta:
+  npm init -y
+
+2. Depois, instale o módulo “hello-world-npm”:
+  npm install --save hello-world-npm
+
+3. Com um módulo instalado podemos executá-lo pela linha de comando utilizando o npx:
+  Obs.: Repare na pasta node_modules/.bin/hello-world-npm que o arquivo que nós estamos executando é o principal do módulo.
+    
+  npx hello-world-npm
+  
+4. Além de executar um módulo com o npx, podemos criar scripts de atalho para qualquer comando npx, ou mesmo outros tipos de comando. Para fazer isso só precisamos incluir o script no arquivo “package.json”. Inclua um script que roda o módulo hello-world-npm com um comando abreviado:
+    
+obs.: Repare que não precisamos incluir o comando npx nos scripts, ele funciona automaticamente.
+
+// package.json
+
+// ...
+	"scripts": {
+    "hello": "hello-world-npm"
+	},
+// ...
+
+5. E então execute o script com o comando “npm run“:
+  npm run hello
+
+6. Agora vamos criar um script para executar nossos próprios arquivos. Isso é um procedimento muito comum para criarmos atalhos que rodam as nossas aplicações ou partes dela. 
+
+Os scripts npm servem para executar qualquer procedimento desejado, qualquer outro comando. basta inserir o script no arquivo package.json
+
+Exemplos comuns de scripts: executar o app, executar em modo de desenvolvimento, executar testes automatizados, servir de atalho para comandos grandes e/ou que são usados com frequência, etc. Crie um script para rodar o arquivo principal do projeto:
+
+// package.json
+
+// ...
+	"scripts": {
+    "hello": "hello-world-npm",
+    "start": "node index.js"
+  },
+// ...
+
+Para executar o script criado, no terminal use o npm run:
+  npm run nome_do_script
+No caso foi criado o script hello, sendo a execução invocada por 'npm run hello'
+
+Também é possível criar um script na package.json para executar o próprio programa em si, muito útil para automatizar a execução.
+
+// package.json
+"start": "node index.js"
+
+7. E antes de executar o comando vamos criar o arquivo principal “index.js”:
+// index.js
+
+const hello = require('hello-world-npm')
+
+console.log(hello())
+
+8. E para concluir podemos rodar o comando “npm run start” para executar nossa aplicação. No entanto, o comando start é um comando especial do Node, e também podemos executar ele apenas com:
+
+  npm start
