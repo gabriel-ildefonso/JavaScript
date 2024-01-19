@@ -13,7 +13,7 @@ console.log(a ?? b ?? c)
 let person = {
   name: "John Doe",
   email: "doejohn@email.com",
-  birthay: "1990-03-14"
+  birthay: "1990-03-14",
   age: 32
   }
   

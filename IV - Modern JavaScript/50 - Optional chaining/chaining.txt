@@ -5,3 +5,7 @@ Em outras palavras, permite acessar propriedades internas sem lançar erros quan
 Funciona de forma similar ao encadeamento normal (operador '.'), porém é descrito como '?.'
 
 É chamado de encademento opcional por ele fazer o encadeamento se a propriedade existir.
+
+console.log(user?.friends[0]?.phone?.ddd)
+
+Na prática, funciona assim: Se 'user' não for undefined, leia friends[0]; se friends[0] não for undefined, leia phone; se phone não for undefined, leia ddd; caso algum caso retorne undefined, interrompa o processo retornando 'undefined'.

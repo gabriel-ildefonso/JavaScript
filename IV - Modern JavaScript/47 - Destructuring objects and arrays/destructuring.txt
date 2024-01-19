@@ -13,3 +13,15 @@ const [x, y] = coordinates
 function hello({name}){
   console.log(`Hello ${name}`)
 }
+const person = {
+  name: 'Luke',
+  job: 'farmer',
+  parents: ['Anakin', 'Padme']
+}
+//método comum:
+const name = person.name
+
+//usando a desestruturação (muito mais fácil):
+const {job, parents} = person
+// utilizando as chaves com a propriedade do objeto, o JS já entende que deve criar variáveis com os dados da propriedade informada.
+console.log(name, job, parents)

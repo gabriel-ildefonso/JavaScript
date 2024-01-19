@@ -1,4 +1,4 @@
-É um operador lógico que retorna o seu operando do lado direito quando o seu operadort do lado esquerdo é null ou undefined. Caso contrário, ele retorna o seu operando do lado esquerdo.
+É um operador lógico que retorna o seu operando do lado direito quando o seu operador do lado esquerdo é null ou undefined. Caso contrário, ele retorna o seu operando do lado esquerdo.
 
 Utiliza dois pontos de interrogação: '??'
 

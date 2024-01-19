@@ -2,7 +2,7 @@ ARROW FUNCTION
 
 Arrow function é uma forma diferente de escrever uma função anônima.
 
-Esse método não utiliza a palavra reservada 'function', utiliza apenas '=>' após os parâmetros (por iss arrow).
+Esse método não utiliza a palavra reservada 'function', utiliza apenas '=>' após os parâmetros (por isso arrow).
 
 Não possui seus próprios 'this' para referenciar o próprio objeto; 'arguments' , 'super'e 'new.target'.
 
