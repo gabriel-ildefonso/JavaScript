@@ -75,6 +75,7 @@
   const author = { name: "Christopher Paolini" }
   const tags = ["fantasy", "adventure", "medieval"]
 
+  Para usar a função construtora, usa-se o comando específico "new" 
   const eragon = new Book("Eragon", 468, tags, author)
 
   eragon.addOnStock(20)

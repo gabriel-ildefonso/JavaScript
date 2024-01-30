@@ -45,4 +45,6 @@
 
   console.log(eragon)
   console.log(eldest)
+  
+  Para verificar se uma instância pertence a uma classe podemos usar o método "instanceof"
   console.log(eragon instanceof Book)

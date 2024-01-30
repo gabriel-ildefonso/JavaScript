@@ -1,13 +1,106 @@
 OOP
+A programação orientada a objetos (POO) é um paradigma de programação que tem como peças centrais os objetos e a comunicação entre eles. 
 
-A programação orientada a objetos é um paradigma de programação, ou seja, um conjunto de conceitos e recursos de linguagem que guiam a forma como programamos.
 
-Tem como peça central os objetos e a forma como eles se comunicam.
+O QUE É UM PARADIGMA DE PROGRAMAÇÃO?
+Um paradigma de programação é um conjunto de conceitos e recursos de uma linguagem de programação que guiam a forma como escrevemos o código. Ou seja, o paradigma define um modo de pensar e estruturar a programação, ditando regras e boas práticas.
 
-Os objetos podem conter dados (atributos) e códigos (métodos)
+Alguns exemplos de paradigmas de programação são:
+> Programação estruturada
+> Programação orientada a objetos
+> Programação funcional
+> Programação lógica
 
-Outros dois termos importantes na OOP são classes e instâncias
+Cada paradigma tem sua própria forma de abordar a resolução de problemas computacionais. O programador precisa entender os conceitos do paradigma para aplicá-lo corretamente.
 
-  Classes: são como fábricas de objetos a partir de uma 'forma'
+No caso da POO, os conceitos principais giram em torno de objetos e classes, comunicação entre objetos, encapsulamento, herança, polimorfismo. Esses conceitos serão explicados em detalhes mais à frente.
 
-  instâncias: são os objetos fabricados pelas classes
+Além de conceitos, os paradigmas também definem recursos. Recursos são funcionalidades e estruturas que a linguagem de programação precisa oferecer para viabilizar aquele paradigma.
+
+Por exemplo, para programar orientado a objetos em JavaScript, precisamos de recursos como classes, métodos e modularização. Em linguagem funcional, recursos comuns são funções de primeira classe, funções puras, recursão, higher order functions.
+
+
+OBJETOS COMO PEÇAS CENTRAIS
+A programação orientada a objetos, como o próprio nome indica, tem como peças centrais da aplicação os objetos.
+
+
+MAS O QUE SÃO OBJETOS?
+Objetos são estruturas que contém dados na forma de atributos e código na forma de métodos. Ou seja, os objetos unem dados e código em uma mesma estrutura.
+
+Por exemplo, podemos ter um objeto Carro com os seguintes atributos:
+cor
+marca
+ano de fabricação
+
+E métodos como:
+ligar()
+desligar()
+acelerar()
+
+Essa é uma das grandes vantagens da POO: podemos encapsular dados e código dentro de um objeto, facilitando a organização e compreensão do código. Além disso, outro pilar da POO é a comunicação entre objetos. Os objetos se comunicam trocando mensagens, ou seja, chamando os métodos uns dos outros. Por exemplo, se temos um objeto Motorista, ele pode enviar uma mensagem ao objeto Carro chamando o método acelerar(). Isso permite que os objetos interajam de forma intuitiva, aproximando o código da realidade.
+
+
+CLASSES E INSTÂNCIAS
+Em POO, classes e instâncias (objetos) são conceitos fundamentais.
+
+As classes servem como um modelo, uma forma ou plano de construção de objetos. A classe define quais são os atributos e métodos que o objeto terá.
+
+Já instância ou objeto é cada elemento específico criado a partir de uma classe. A instância contém os atributos e métodos definidos pela classe.
+
+A relação entre classes e instâncias é análoga à relação entre moldes e biscoitos, ou planta de construção e prédios:
+
+A classe é o molde do biscoito ou planta de construção do prédio;
+Cada instância/objeto é um biscoito assado ou prédio construído seguindo aquele molde/planta.
+
+RESUMINDO:
+
+A classe define o modelo;
+A instância é um elemento criado seguindo aquele modelo.
+Isso permite criar muitos objetos a partir de uma mesma classe, seguindo as definições daquele modelo.
+
+
+VANTAGENS DA POO
+A programação orientada a objetos traz muitas vantagens, entre elas:
+
+- Organização do código: ao encapsular dados e métodos dentro de objetos, o código fica mais organizado e de fácil entendimento;
+
+- Reutilização: podemos criar classes genéricas e reutilizá-las em aplicações futuras, sem precisar reescrever todo o código;
+
+- Ocultação da complexidade: Ao dividir uma aplicação em classes e objetos, conseguimos "esconder" a complexidade interna de cada um. Isso simplifica a manutenção e evolução do código;
+
+- Paralelismo entre código e vida real: Como os objetos podem representar entidades do mundo real (carros, pessoas, produtos), fica mais intuitivo entender e modificar o código;
+
+Essas são algumas das principais vantagens. Conforme você for estudando e aplicando POO na prática, mais benefícios serão percebidos.
+
+PILARES DA POO
+A POO é sustentada por 4 pilares fundamentais:
+
+1. Abstração
+Abstração significa simplificar e definir apenas os aspectos essenciais de um conceito, ocultando detalhes menos importantes. Em POO, realizamos abstração ao definir classes que representam entidades do mundo real, determinando quais são os seus atributos e métodos principais.
+
+Por exemplo, ao invés de tentar representar todos os detalhes de um carro em nosso sistema, definimos uma classe Carro com apenas os atributos e métodos que realmente importam para nossa aplicação.
+
+2. Encapsulamento
+Encapsulamento é o princípio de manter dados (atributos) e métodos juntos dentro de uma mesma estrutura (a classe). Além disso, encapsulamento também se refere a esconder a implementação interna de um objeto, expondo para o usuário apenas uma interface simplificada.
+
+O usuário sabe interagir com a classe, mas não precisa entender toda sua complexidade interna. Isso facilita o uso e evita efeitos colaterais indesejados.
+
+3. Herança
+Herança permite que classes compartilhem atributos e métodos, através de "relações familiares". Por exemplo, podemos ter uma classe genérica Veiculo e classes mais específicas como Carro e Moto que herdam os atributos e métodos da classe Veiculo.
+
+Assim, evitamos a repetição de código e aproveitamos ao máximo as generalizações.
+
+4. Polimorfismo
+Polimorfismo significa "muitas formas". Em POO, se refere à capacidade de classes derivadas (que herdam de uma classe base) de terem métodos com o mesmo nome, mas comportamentos diferentes.
+
+Por exemplo, as classes Carro e Moto podem implementar o método acelerar() de forma diferente, aproveitando o nome em comum mas tendo implementações próprias. Isso é polimorfismo.
+
+O polimorfismo permite reutilizar nomes de métodos, aproveitando interfaces comuns em classes diferentes.
+
+
+POO EM JAVASCRIPT
+JavaScript não possuía originalmente recursos nativos para programação orientada a objetos. Por isso, algumas simulações eram necessárias, como usar funções construtoras no lugar classes. Após o lançamento do ES6 (ECMAScript 2015), a linguagem passou a suportar classes e herança de forma nativa, facilitando o uso de POO. 
+
+As classes em JavaScript têm sintaxe e funcionamento similares às classes em outras linguagens orientadas a objetos, como Java. Isso trouxe mais familiaridade para quem já conhecia POO. Além disso, frameworks e libs como React também incentivaram o uso de POO em JavaScript para organização do front-end.
+
+Portanto, atualmente POO é considerado um padrão correto e idiomático para se programar em JavaScript, principalmente com o auxílio de syntax sugar trazido pelo ES6.
