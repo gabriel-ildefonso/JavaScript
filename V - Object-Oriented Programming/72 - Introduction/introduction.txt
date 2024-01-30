@@ -1,24 +1,81 @@
-O QUE IREMOS APRENDER
+O QUE É PROGRAMAÇÃO ORIENTADA A OBJETOS?
+A Programação Orientada a Objetos (POO) é um paradigma ou forma de programar que se baseia no conceito de objetos. Paradigma nada mais é do que um modo de fazer as coisas, uma abordagem.
 
-O que é programação orientada a objetos?
-  É um paradigma de programação
+Ao invés de criar funções e dados soltos, na POO nós modelamos os dados na forma de objetos. Esses objetos possuem propriedades e comportamentos, assim como muitas coisas no mundo real.
 
-Fundamentos da programação
-
-  Associação
-
-  Encapsulamento
-
-  Herança
-
-  Polimorfismo
+Por exemplo, um objeto "Cachorro" teria propriedades como "raça", "cor", "tamanho" e comportamentos como "latir", "correr", "comer". Dessa forma, a POO permite representar coisas do mundo real em nosso código de maneira intuitiva e organizada.
 
 
-Como usar POO no javascript
-  Classes e instâncias
+PARA QUE SERVE A POO?
+A Programação Orientada a Objetos traz muitos benefícios, incluindo:
 
-  Construtores
+- Organização: ao agrupar dados e funções em objetos, o código fica mais organizado e de fácil entendimento.
 
-  Acessadores
+- Reuso: objetos criados podem ser reutilizados em outros programas, economizando trabalho.
 
-  Etc
+- Ocultação: os detalhes internos do objeto podem ser ocultados, mostrando apenas o essencial.
+
+- Polimorfismo: objetos da mesma classe podem ser usados de forma diferente, aumentando a flexibilidade.
+
+Em resumo, a POO permite criar programas mais modulares, flexíveis e fáceis de manter. Por isso, é muito popular atualmente.
+
+As linguagens mais usadas como Java, Python, C# e muitas outras adotam o paradigma de POO. O JavaScript também suporta POO, e é sobre isso que vamos aprender mais a seguir!
+
+
+FUNDAMENTOS DA POO
+Para entender bem a Programação Orientada a Objetos, precisamos estudar alguns conceitos fundamentais. São eles:
+
+1 - Abstração
+Abstração refere-se ao ato de separar a parte essencial de um conceito da sua representação real. Ou seja, pegamos um objeto do mundo real, abstraímos suas características principais e modelamos em um objeto de software.
+
+Por exemplo, um carro no mundo real tem rodas, volante, motor e muitas outras partes. Mas ao criar um objeto "Carro" em código, nos preocupamos apenas com suas características essenciais em relação ao que queremos representar.
+
+2 - Encapsulamento
+Encapsulamento é o princípio de esconder a complexidade interna de um objeto, expondo apenas as informações necessárias. Na POO, aplicamos o encapsulamento ao tornar atributos e métodos privados, ocultando seus detalhes de implementação. Assim o objeto é tratado como uma "caixa preta". Isso aumenta a flexibilidade e evita que o código externo afete sem querer o estado interno de um objeto.
+
+3 - Herança
+A herança permite que um objeto herde (receba) atributos e métodos de outro objeto, seu "pai". Isso evita repetição de código e estabelece relações entre classes.
+
+Por exemplo, podemos criar uma classe "Cachorro" que herda propriedades da classe "Mamífero", evitando escrever tudo de novo na classe Cachorro. A classe que herda é chamada de "filha" ou "subclasse", enquanto a classe pai é a "superclasse".
+
+4 - Polimorfismo
+Polimorfismo significa "muitas formas". Com POO, isso permite que classes derivadas de uma mesma superclasse tenham comportamentos distintos para um mesmo método. Por exemplo, as classes Cachorro e Gato podem derivar da classe Animal e ter o método Falar. Porém, o Cachorro faz "au au", enquanto o Gato faz "miau".
+
+
+POO EM JAVASCRIPT
+A boa notícia é que o JavaScript tem suporte completo à Programação Orientada a Objetos desde o ES6, a versão lançada em 2015. Isso inclui implementação de classes, herança, encapsulamento e polimorfismo.
+
+Vamos conhecer alguns recursos importantes:
+
+1 - Classes
+Classes são modelos que servem de base para criar objetos. Elas agrupam dados (atributos) e funcionalidades (métodos) compartilhados por um tipo de objeto.
+
+Em JS criamos classes com a palavra class:
+
+class Dog {  //atributos e métodos aqui dentro  }
+
+2 - Instâncias
+Uma instância é um objeto criado a partir de uma classe e contém suas propriedades e métodos. Instanciamos uma classe com a palavra new:
+
+const bob = new Dog(); //bob é instância de Dog
+
+3 - Construtores
+O construtor é um método especial usado para construir/inicializar objetos quando uma classe é instanciada.
+
+class Dog {  constructor(name) {    this.name = name;  }  }const bob = new Dog("Bob"); //passa nome ao construtor
+
+4 - Encapsulamento
+Podemos aplicar encapsulamento com getters/setters e com a palavra private:
+
+class Dog {  #privateNum = 10;    get num() {    return this.#privateNum;  }  set num(newNum) {    this.#privateNum = newNum;  }}
+
+5 - Herança
+Herança em JS é feita com a palavra extends:
+
+class Animal {  constructor(name) {    this.name = name;  }    speak() {    console.log(`${this.name} faz barulho!`);  }}class Dog extends Animal {  //herda Animal}const bob = new Dog("Bob");bob.speak(); //Bob faz barulho!
+
+6 - Polimorfismo
+Podemos sobrescrever métodos das superclasses:
+
+class Animal {  speak() {     console.log('...');   }}class Dog extends Animal {  speak() {    console.log('Au au!');  }}const bob = new Dog();bob.speak(); //Au au!
+E assim podemos implementar polimorfismo!

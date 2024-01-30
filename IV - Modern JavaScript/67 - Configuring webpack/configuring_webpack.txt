@@ -16,7 +16,7 @@
     }
   }
 
-  Também foi criado o arquivo index.js na pasta dist, pois por padrão, o webpack usa o nome da entrada para criar o arquivo de saída.
+  Também foi criado o arquivo index.js na pasta dist, pois por padrão, o webpack usa o nome da entra'da para criar o arquivo de saída.
     
 3. Além disso, podemos ver que o webpack está emitindo um WARNING no terminal. Isso não é um impede o seu funcionamento, mas é um aviso de que estamos fazendo algo que pode virar um problema. Nesse caso, ele pede que especifiquemos o modo. Vamos fazer isso através da propriedade mode:
     

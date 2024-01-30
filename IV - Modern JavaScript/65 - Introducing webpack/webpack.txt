@@ -21,7 +21,6 @@ A saída resultante do processo de empacotamento dos módulos
 
 3 - Loaders
 Por padrão, o webpack entende apenas javascript e JSON.
-
 Loaders permitem que o webpack consiga entender outros tipos de arquivos (como .css, por exemplo), transformando-os em módulos válidos e incluindo-os no grafo de dependências. Loaders sempre irão realizar algum tipo de transformação no código javascript como, por exemplo, utilizar o babel junto com o webpack
 
 4 - Plugins
